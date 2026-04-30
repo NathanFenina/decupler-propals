@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposition Décupler × Lettershop — SEO & AI Search</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07080f;
+  --bg2:#0d0e1c;
+  --bg3:#111228;
+  --border:rgba(123,92,250,.15);
+  --violet:#7B5CFA;
+  --vl:#a78bfa;
+  --green:#00E5A0;
+  --red:#FF4D6D;
+  --amber:#f59e0b;
+  --text:#dde2f0;
+  --muted:#8892aa;
+  --dim:#4a5270;
+  --F:'Syne',sans-serif;
+  --B:'DM Sans',sans-serif;
+  --M:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--B);font-size:16px;line-height:1.7;overflow-x:hidden;-webkit-text-fill-color:var(--text)}
+h1,h2,h3,h4{font-family:var(--F);color:#fff;-webkit-text-fill-color:#fff;line-height:1.1}
+p{color:var(--muted);-webkit-text-fill-color:var(--muted)}
+a{text-decoration:none;color:inherit;-webkit-text-fill-color:inherit}
+
+/* GRID */
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(123,92,250,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(123,92,250,.022) 1px,transparent 1px);background-size:72px 72px;pointer-events:none;z-index:0}
+
+/* ORBS */
+.orb{position:fixed;border-radius:50%;filter:blur(160px);pointer-events:none;z-index:0;animation:orb 16s ease-in-out infinite}
+.o1{width:700px;height:700px;background:rgba(123,92,250,.07);top:-200px;right:-150px;animation-delay:-4s}
+.o2{width:500px;height:500px;background:rgba(0,229,160,.04);top:50%;left:-150px;animation-delay:-9s}
+.o3{width:350px;height:350px;background:rgba(123,92,250,.04);bottom:5%;right:5%;animation-delay:-2s}
+@keyframes orb{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(40px,-30px) scale(1.06)}70%{transform:translate(-25px,35px) scale(.94)}}
+
+.wrap{max-width:860px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(7,8,15,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:14px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--F);font-size:.85rem;font-weight:800;color:#fff;-webkit-text-fill-color:#fff;letter-spacing:.02em}
+.nav-logo span{color:var(--vl);-webkit-text-fill-color:var(--vl)}
+.nav-tag{font-family:var(--M);font-size:.65rem;color:var(--dim);-webkit-text-fill-color:var(--dim);background:rgba(123,92,250,.07);padding:4px 10px;border-radius:20px;border:1px solid var(--border)}
+
+/* HERO */
+.hero{padding:88px 0 72px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(123,92,250,.08);border:1px solid var(--border);color:var(--vl);-webkit-text-fill-color:var(--vl);font-family:var(--M);font-size:.65rem;padding:5px 14px;border-radius:20px;margin-bottom:24px;letter-spacing:.08em;text-transform:uppercase}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;letter-spacing:-.03em;margin-bottom:20px;line-height:1.06}
+.hl{color:var(--vl);-webkit-text-fill-color:var(--vl)}
+.hl2{color:var(--green);-webkit-text-fill-color:var(--green)}
+.hlr{color:var(--red);-webkit-text-fill-color:var(--red)}
+.hero-sub{font-size:1rem;max-width:580px;margin-bottom:32px;line-height:1.7;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+
+/* DIAGNOSIS BOX */
+.diag{background:var(--bg2);border:1px solid rgba(255,77,109,.2);border-radius:20px;padding:32px;margin-bottom:0;position:relative;overflow:hidden}
+.diag::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),rgba(245,158,11,.6),transparent)}
+.diag-title{font-family:var(--F);font-size:1rem;font-weight:800;color:#fff;-webkit-text-fill-color:#fff;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.diag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+.diag-stat{background:rgba(255,77,109,.06);border:1px solid rgba(255,77,109,.15);border-radius:12px;padding:18px;text-align:center}
+.diag-num{font-family:var(--F);font-size:1.8rem;font-weight:900;color:var(--red);-webkit-text-fill-color:var(--red);line-height:1;display:block}
+.diag-label{font-family:var(--M);font-size:.62rem;color:var(--dim);-webkit-text-fill-color:var(--dim);margin-top:5px;letter-spacing:.05em;text-transform:uppercase;display:block}
+.diag-problems{display:flex;flex-direction:column;gap:10px}
+.problem{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:rgba(255,77,109,.04);border:1px solid rgba(255,77,109,.1);border-radius:10px;font-size:.875rem;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+.problem-dot{width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:6px}
+.problem strong{color:#d4daf0;-webkit-text-fill-color:#d4daf0;font-weight:600}
+
+/* OPPORTUNITY */
+.opp{background:linear-gradient(135deg,rgba(0,229,160,.05),rgba(123,92,250,.04));border:1px solid rgba(0,229,160,.15);border-radius:20px;padding:32px;position:relative;overflow:hidden}
+.opp::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),var(--violet),transparent)}
+.opp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.opp-stat{text-align:center}
+.opp-num{font-family:var(--F);font-size:2rem;font-weight:900;color:var(--green);-webkit-text-fill-color:var(--green);line-height:1;display:block}
+.opp-label{font-family:var(--M);font-size:.62rem;color:var(--dim);-webkit-text-fill-color:var(--dim);margin-top:5px;letter-spacing:.05em;text-transform:uppercase;display:block}
+
+/* SECTION */
+.section{padding:72px 0;border-top:1px solid rgba(123,92,250,.08)}
+.slabel{font-family:var(--M);font-size:.65rem;color:var(--violet);-webkit-text-fill-color:var(--violet);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;display:block}
+.stitle{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:10px;letter-spacing:-.02em;color:#fff;-webkit-text-fill-color:#fff}
+.ssub{font-size:.92rem;max-width:560px;margin-bottom:36px;line-height:1.7;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+
+/* SOLUTION CARDS */
+.solutions{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.sol-card{background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:26px;position:relative;overflow:hidden;transition:border-color .25s}
+.sol-card:hover{border-color:rgba(123,92,250,.35)}
+.sol-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.sol-v::before{background:linear-gradient(90deg,var(--violet),var(--vl))}
+.sol-g::before{background:linear-gradient(90deg,var(--green),rgba(0,229,160,.3))}
+.sol-a::before{background:linear-gradient(90deg,var(--amber),rgba(245,158,11,.3))}
+.sol-b::before{background:linear-gradient(90deg,#60a5fa,rgba(96,165,250,.3))}
+.sol-card-full{grid-column:1/-1}
+.sol-icon{font-size:1.5rem;margin-bottom:12px;display:block}
+.sol-title{font-family:var(--F);font-size:1rem;font-weight:800;color:#fff;-webkit-text-fill-color:#fff;margin-bottom:6px}
+.sol-desc{font-size:.84rem;color:var(--muted);-webkit-text-fill-color:var(--muted);line-height:1.6;margin-bottom:14px}
+.sol-items{display:flex;flex-direction:column;gap:6px}
+.sol-item{font-size:.8rem;color:var(--dim);-webkit-text-fill-color:var(--dim);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.sol-check{color:var(--green);-webkit-text-fill-color:var(--green);font-size:.7rem;font-weight:800;flex-shrink:0;margin-top:2px}
+.sol-item strong{color:#b4bcda;-webkit-text-fill-color:#b4bcda;font-weight:600}
+
+/* AI BADGE */
+.ai-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,160,.08);border:1px solid rgba(0,229,160,.2);border-radius:6px;padding:3px 10px;font-family:var(--M);font-size:.62rem;font-weight:700;color:var(--green);-webkit-text-fill-color:var(--green);letter-spacing:.04em;margin-top:10px}
+
+/* MÉTHODE / PROCESS */
+.process{display:flex;flex-direction:column;gap:0;position:relative;margin-top:32px}
+.process::before{content:'';position:absolute;left:25px;top:26px;bottom:26px;width:1px;background:linear-gradient(to bottom,rgba(123,92,250,.4),rgba(0,229,160,.2));z-index:0}
+.ps{display:flex;gap:22px;padding:22px 0;position:relative;z-index:1}
+.ps-num{width:50px;height:50px;border-radius:14px;background:var(--bg2);border:1px solid rgba(123,92,250,.3);display:flex;align-items:center;justify-content:center;font-family:var(--M);font-size:.78rem;font-weight:700;color:var(--vl);-webkit-text-fill-color:var(--vl);flex-shrink:0}
+.ps-body{flex:1}
+.ps-body h4{font-weight:800;color:#fff;-webkit-text-fill-color:#fff;font-size:.95rem;margin-bottom:4px;font-family:var(--F)}
+.ps-body p{font-size:.84rem;color:var(--dim);-webkit-text-fill-color:var(--dim);line-height:1.6}
+.ps-tag{display:inline-flex;margin-top:8px;padding:3px 10px;border-radius:5px;font-family:var(--M);font-size:.62rem;font-weight:700}
+.pt-v{background:rgba(123,92,250,.1);color:var(--vl);-webkit-text-fill-color:var(--vl)}
+.pt-g{background:rgba(0,229,160,.08);color:var(--green);-webkit-text-fill-color:var(--green)}
+.pt-a{background:rgba(245,158,11,.08);color:var(--amber);-webkit-text-fill-color:var(--amber)}
+
+/* USE CASES */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.case-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px;transition:border-color .25s}
+.case-card:hover{border-color:rgba(123,92,250,.3)}
+.case-logo{font-size:1.1rem;margin-bottom:10px;display:block}
+.case-client{font-family:var(--F);font-size:.88rem;font-weight:800;color:#fff;-webkit-text-fill-color:#fff;margin-bottom:4px}
+.case-sector{font-family:var(--M);font-size:.62rem;color:var(--dim);-webkit-text-fill-color:var(--dim);margin-bottom:10px;letter-spacing:.04em;text-transform:uppercase;display:block}
+.case-result{font-size:.8rem;color:var(--muted);-webkit-text-fill-color:var(--muted);line-height:1.55}
+.case-result strong{color:var(--green);-webkit-text-fill-color:var(--green);font-weight:700}
+
+/* PROJECTION */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.t-block{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px;position:relative;overflow:hidden}
+.t-block::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.t1::before{background:rgba(123,92,250,.4)}
+.t2::before{background:rgba(123,92,250,.65)}
+.t3::before{background:rgba(123,92,250,.85)}
+.t4::before{background:linear-gradient(90deg,var(--violet),var(--green))}
+.t-period{font-family:var(--M);font-size:.62rem;color:var(--dim);-webkit-text-fill-color:var(--dim);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;display:block}
+.t-title{font-family:var(--F);font-size:.9rem;font-weight:800;color:#fff;-webkit-text-fill-color:#fff;margin-bottom:8px}
+.t-items{display:flex;flex-direction:column;gap:5px}
+.t-item{font-size:.78rem;color:var(--dim);-webkit-text-fill-color:var(--dim);display:flex;gap:7px;line-height:1.5}
+.t-dot{width:4px;height:4px;border-radius:50%;background:var(--vl);flex-shrink:0;margin-top:6px}
+.t-kpi{font-family:var(--M);font-size:.72rem;color:var(--vl);-webkit-text-fill-color:var(--vl);margin-top:10px;padding:5px 10px;background:rgba(123,92,250,.08);border-radius:6px;border:1px solid rgba(123,92,250,.15);display:inline-block}
+.t4 .t-kpi{color:var(--green);-webkit-text-fill-color:var(--green);background:rgba(0,229,160,.08);border-color:rgba(0,229,160,.2)}
+
+/* INVESTISSEMENT */
+.invest-card{background:linear-gradient(160deg,#111827,#0f172a);border:1px solid rgba(51,65,85,.5);border-radius:22px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.4)}
+.invest-header{padding:32px 36px 24px;border-bottom:1px solid rgba(51,65,85,.3)}
+.invest-title{font-family:var(--F);font-size:1.1rem;font-weight:800;color:#fff;-webkit-text-fill-color:#fff;margin-bottom:4px}
+.invest-sub{font-size:.84rem;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+.invest-rows{padding:0 36px}
+.invest-row{display:flex;align-items:center;justify-content:space-between;padding:18px 0;border-bottom:1px solid rgba(51,65,85,.2);gap:16px}
+.invest-row:last-child{border-bottom:none}
+.invest-row-left{display:flex;align-items:center;gap:14px;flex:1}
+.invest-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.ii-v{background:rgba(123,92,250,.1);border:1px solid rgba(123,92,250,.2)}
+.ii-g{background:rgba(0,229,160,.08);border:1px solid rgba(0,229,160,.15)}
+.ii-a{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.15)}
+.ii-b{background:rgba(96,165,250,.08);border:1px solid rgba(96,165,250,.15)}
+.invest-label{font-size:.9rem;font-weight:500;color:rgba(240,244,255,.8);-webkit-text-fill-color:rgba(240,244,255,.8);display:block;line-height:1.3}
+.invest-detail{font-size:.75rem;color:var(--dim);-webkit-text-fill-color:var(--dim);display:block}
+.invest-price{font-family:var(--M);font-size:.92rem;font-weight:700;color:#fff;-webkit-text-fill-color:#fff;white-space:nowrap;text-align:right}
+.invest-total{display:flex;align-items:center;justify-content:space-between;padding:22px 36px;background:rgba(123,92,250,.06);border-top:1px solid rgba(123,92,250,.2)}
+.invest-total-label{font-size:.9rem;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+.invest-total-price{font-family:var(--F);font-size:2.2rem;font-weight:900;color:#fff;-webkit-text-fill-color:#fff;letter-spacing:-.03em}
+.invest-total-price span{font-size:.85rem;font-weight:400;color:var(--dim);-webkit-text-fill-color:var(--dim);font-family:var(--M)}
+
+/* GARANTIE */
+.garantie{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.gar-card{border-radius:14px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start}
+.gar-card.exit{background:rgba(255,77,109,.04);border:1px solid rgba(255,77,109,.15)}
+.gar-card.commit{background:rgba(0,229,160,.04);border:1px solid rgba(0,229,160,.15)}
+.gar-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.gar-title{font-family:var(--F);font-size:.9rem;font-weight:800;margin-bottom:4px}
+.exit .gar-title{color:#fca5a5;-webkit-text-fill-color:#fca5a5}
+.commit .gar-title{color:var(--green);-webkit-text-fill-color:var(--green)}
+.gar-desc{font-size:.8rem;line-height:1.6}
+.exit .gar-desc{color:rgba(252,165,165,.6);-webkit-text-fill-color:rgba(252,165,165,.6)}
+.commit .gar-desc{color:rgba(0,229,160,.6);-webkit-text-fill-color:rgba(0,229,160,.6)}
+
+/* TRUST */
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.trust-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px;transition:border-color .25s}
+.trust-card:hover{border-color:rgba(123,92,250,.3)}
+.trust-icon{font-size:1.2rem;margin-bottom:10px;display:block}
+.trust-title{font-family:var(--F);font-size:.88rem;font-weight:800;color:#fff;-webkit-text-fill-color:#fff;margin-bottom:5px}
+.trust-desc{font-size:.78rem;color:var(--dim);-webkit-text-fill-color:var(--dim);line-height:1.55}
+
+/* CTA */
+.cta-block{background:linear-gradient(135deg,rgba(123,92,250,.1),rgba(0,229,160,.05));border:1px solid rgba(123,92,250,.3);border-radius:22px;padding:52px 44px;text-align:center;position:relative;overflow:hidden}
+.cta-block::after{content:'';position:absolute;top:-1px;left:15%;right:15%;height:2px;background:linear-gradient(90deg,transparent,var(--violet),var(--green),transparent)}
+.cta-block h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:900;margin-bottom:10px;letter-spacing:-.02em;color:#fff;-webkit-text-fill-color:#fff}
+.cta-block p{font-size:.95rem;max-width:480px;margin:0 auto 28px;color:var(--muted);-webkit-text-fill-color:var(--muted)}
+.cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;padding:14px 26px;border-radius:12px;cursor:pointer;transition:opacity .2s,transform .15s;font-family:var(--F)}
+.btn:hover{opacity:.88;transform:translateY(-2px)}
+.btn-v{background:linear-gradient(135deg,var(--violet),#9d7dff);color:#fff;-webkit-text-fill-color:#fff;box-shadow:0 0 30px rgba(123,92,250,.25)}
+.btn-ghost{background:transparent;border:1px solid rgba(123,92,250,.35);color:var(--vl);-webkit-text-fill-color:var(--vl)}
+.cta-validity{margin-top:20px;font-family:var(--M);font-size:.65rem;color:var(--dim);-webkit-text-fill-color:var(--dim);letter-spacing:.06em}
+.cta-validity strong{color:var(--red);-webkit-text-fill-color:var(--red)}
+
+/* AUTHOR */
+.author-bar{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:40px}
+.author-avatar{width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid rgba(123,92,250,.3)}
+.author-avatar img{width:100%;height:100%;object-fit:cover}
+.author-name{font-weight:800;color:#fff;-webkit-text-fill-color:#fff;font-size:.95rem;font-family:var(--F)}
+.author-bio{font-size:.78rem;color:var(--dim);-webkit-text-fill-color:var(--dim);line-height:1.5;margin-top:3px}
+.author-links{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.author-link{padding:6px 14px;border-radius:8px;font-size:.75rem;font-weight:600;font-family:var(--M)}
+.al-li{background:rgba(123,92,250,.1);border:1px solid rgba(123,92,250,.2);color:var(--vl);-webkit-text-fill-color:var(--vl)}
+.al-sub{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.2);color:var(--amber);-webkit-text-fill-color:var(--amber)}
+
+/* FOOTER */
+footer{padding:32px 0;border-top:1px solid rgba(123,92,250,.08);text-align:center}
+footer p{font-size:.75rem;color:var(--dim);-webkit-text-fill-color:var(--dim);font-family:var(--M)}
+
+/* ANIMS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.fu{opacity:0;animation:fadeUp .6s ease forwards}
+.fu:nth-child(1){animation-delay:.06s}.fu:nth-child(2){animation-delay:.14s}.fu:nth-child(3){animation-delay:.22s}.fu:nth-child(4){animation-delay:.30s}.fu:nth-child(5){animation-delay:.38s}
+
+/* DIVIDER */
+.gap{height:24px}
+.sep{height:1px;background:linear-gradient(90deg,transparent,rgba(123,92,250,.15),transparent);margin:8px 0}
+
+/* RESPONSIVE */
+@media(max-width:720px){
+  .solutions{grid-template-columns:1fr}
+  .cases{grid-template-columns:1fr 1fr}
+  .timeline{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .garantie{grid-template-columns:1fr}
+  .diag-grid{grid-template-columns:repeat(3,1fr)}
+  .opp-grid{grid-template-columns:repeat(3,1fr)}
+  .invest-rows{padding:0 20px}
+  .invest-header{padding:24px 20px 18px}
+  .invest-total{padding:18px 20px}
+  .cta-block{padding:36px 22px}
+  .author-links{margin-left:0}
+}
+@media(max-width:480px){
+  .cases{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr}
+  .diag-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="orb o1"></div>
+<div class="orb o2"></div>
+<div class="orb o3"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap nav-inner">
+    <div class="nav-logo">Décupler <span>×</span> Lettershop</div>
+    <div class="nav-tag">Proposition R2 · Avril 2026</div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow fu">Pour Philippe Dupuy · Accompagnement SEO 12 mois</div>
+    <h1 class="fu">Ton SEO stagne.<br><span class="hl">On sait exactement pourquoi.</span><br>Et comment le <span class="hl2">débloquer.</span></h1>
+    <p class="hero-sub fu">1 200 sessions/mois depuis 18 mois. Google Ads à 50% du CA. Un concurrent espagnol qui prend de l'avance. Il est temps de construire un levier organique durable — avant que la dépendance aux Ads coûte encore plus cher.</p>
+
+    <!-- DIAGNOSTIC -->
+    <div class="diag fu">
+      <div class="diag-title">📉 Ce qu'on a constaté ensemble</div>
+      <div class="diag-grid">
+        <div class="diag-stat">
+          <span class="diag-num">1 200</span>
+          <span class="diag-label">sessions SEO/mois — plat depuis 18 mois</span>
+        </div>
+        <div class="diag-stat">
+          <span class="diag-num">50%</span>
+          <span class="diag-label">du CA dépend de Google Ads</span>
+        </div>
+        <div class="diag-stat">
+          <span class="diag-num">25K</span>
+          <span class="diag-label">visites/mois pour ton concurrent principal</span>
+        </div>
+      </div>
+      <div class="diag-problems">
+        <div class="problem"><span class="problem-dot"></span><div><strong>Contenu insuffisant :</strong> 2 à 4 articles/mois avec l'agence actuelle. C'est trop peu pour un secteur où les mots-clés sont fragmentés et la concurrence monte.</div></div>
+        <div class="problem"><span class="problem-dot"></span><div><strong>Backlinks faibles :</strong> 4-5 liens/mois issus de sites rachetés, sans stratégie de citabilité. Le concurrent espagnol est sur Forbes. Toi, pas encore.</div></div>
+        <div class="problem"><span class="problem-dot"></span><div><strong>Zéro présence dans les LLMs :</strong> Quand un décideur demande à ChatGPT "meilleur fournisseur d'enseignes B2B France", Lettershop n'existe pas dans la réponse.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITÉ -->
+<section class="section">
+  <div class="wrap">
+    <span class="slabel">// L'opportunité</span>
+    <h2 class="stitle">Ce que tu as que tes concurrents n'ont pas</h2>
+    <p class="ssub">26-27% de taux de conversion sur les demandes de devis. 240 commandes en mars. Le fond de business est solide. Le problème c'est le volume en haut du tunnel — pas la qualité du produit.</p>
+    <div class="opp">
+      <p style="font-size:.9rem;line-height:1.65;color:var(--muted);-webkit-text-fill-color:var(--muted);">Tu as le produit, la conversion, la preuve sociale. Ce qu'il manque c'est un moteur SEO qui tourne en continu. Une fois lancé, chaque article publié travaille sans coût additionnel — contrairement aux Ads qui s'arrêtent dès que tu coups le budget.</p>
+      <div class="opp-grid">
+        <div class="opp-stat">
+          <span class="opp-num">26%</span>
+          <span class="opp-label">taux de conversion devis — c'est exceptionnel</span>
+        </div>
+        <div class="opp-stat">
+          <span class="opp-num">10×</span>
+          <span class="opp-label">production de contenu vs agence actuelle</span>
+        </div>
+        <div class="opp-stat">
+          <span class="opp-num">12</span>
+          <span class="opp-label">mois pour un flux leads organique stable</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section">
+  <div class="wrap">
+    <span class="slabel">// Ce qu'on va faire</span>
+    <h2 class="stitle">L'accompagnement — 4 leviers actionnés</h2>
+    <p class="ssub">Pas un seul angle. Un système complet où chaque levier renforce les autres. SEO + technique + backlinks + visibilité IA.</p>
+
+    <div class="solutions">
+
+      <div class="sol-card sol-v">
+        <span class="sol-icon">📝</span>
+        <div class="sol-title">10 contenus SEO / mois</div>
+        <div class="sol-desc">La principale raison de la stagnation : pas assez de contenu ciblé. On triple le volume, avec une stratégie sémantique précise sur les requêtes à conversion — pas du remplissage.</div>
+        <div class="sol-items">
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Recherche de mots-clés</strong> — cartographie complète du secteur enseignes B2B, poses, logos 3D, géolocalisation</div></div>
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Articles + landing pages</strong> — ciblage par type de client (auto-entrepreneur, retail, professions libérales)</div></div>
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Maillage interne optimisé</strong> — chaque contenu renforce les pages produits existantes</div></div>
+        </div>
+        <div class="ai-badge">⚡ Produit avec SEO AI Systems™ · Validé humainement</div>
+      </div>
+
+      <div class="sol-card sol-a">
+        <span class="sol-icon">🔧</span>
+        <div class="sol-title">Correction technique & sitemap</div>
+        <div class="sol-desc">Un contenu parfait sur un site mal configuré ne remonte pas. On commence par solidifier la base avant de monter en vitesse.</div>
+        <div class="sol-items">
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Audit technique complet</strong> — Core Web Vitals, crawlabilité, indexation, balises, redirections</div></div>
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Sitemap & structure</strong> — architecture optimisée pour le crawl Google et les LLMs</div></div>
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Données structurées</strong> — Schema.org pour produits, FAQ, avis, organisation</div></div>
+        </div>
+      </div>
+
+      <div class="sol-card sol-b">
+        <span class="sol-icon">🔗</span>
+        <div class="sol-title">Backlinks & annuaires</div>
+        <div class="sol-desc">Ton concurrent est sur Forbes avec un budget levée de fonds. On construira ton autorité domaine méthodiquement, sur les bonnes sources.</div>
+        <div class="sol-items">
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Annuaires sectoriels BTP</strong> — sourcing des annuaires à autorité dans l'univers enseignes/signalétique</div></div>
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Presse spécialisée & forums</strong> — mentions dans les publications pros, Reddit BTP, communautés business</div></div>
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Stratégie de liens entrants</strong> — outreach ciblé vers sites partenaires et médias retail/commerce</div></div>
+        </div>
+      </div>
+
+      <div class="sol-card sol-g">
+        <span class="sol-icon">🤖</span>
+        <div class="sol-title">Visibilité LLMs & AI Search</div>
+        <div class="sol-desc">ChatGPT, Perplexity, Gemini, Claude — les moteurs IA sont en train de devenir le premier point de contact de tes prospects. Lettershop doit y apparaître.</div>
+        <div class="sol-items">
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Audit IA initial</strong> — on teste aujourd'hui ce que les LLMs répondent sur "enseigne B2B France"</div></div>
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Optimisation GEO on-page</strong> — llms.txt, blocs réponse, formats extractibles par les IA</div></div>
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Citations off-site LLM</strong> — Reddit, annuaires, forums que ChatGPT et Perplexity citent</div></div>
+          <div class="sol-item"><span class="sol-check">✓</span><div><strong>Monitoring mensuel</strong> — suivi de ta présence dans les réponses IA chaque mois</div></div>
+        </div>
+      </div>
+
+    </div><!-- /solutions -->
+
+    <!-- BONUS -->
+    <div style="background:linear-gradient(135deg,rgba(123,92,250,.1),rgba(0,229,160,.05));border:1px solid rgba(123,92,250,.3);border-radius:16px;padding:24px 28px;display:flex;align-items:flex-start;gap:18px;margin-top:4px">
+      <span style="font-size:1.4rem;flex-shrink:0">🎁</span>
+      <div>
+        <div style="font-family:var(--F);font-weight:800;color:#fff;-webkit-text-fill-color:#fff;margin-bottom:5px;">Bonus — Reporting mensuel transparent</div>
+        <div style="font-size:.84rem;color:var(--muted);-webkit-text-fill-color:var(--muted);line-height:1.65;">1 call de suivi mensuel (45 min) + dashboard positions, trafic organique, citations LLMs, backlinks acquis. Ce qui fonctionne, ce qu'on ajuste, ce qu'on fait le mois prochain. Chaque euro justifié. <strong style="color:rgba(240,244,255,.8);-webkit-text-fill-color:rgba(240,244,255,.8);">3 jours/mois dédiés à ton projet.</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODE -->
+<section class="section">
+  <div class="wrap">
+    <span class="slabel">// Comment on travaille</span>
+    <h2 class="stitle">La méthode — mois par mois</h2>
+    <p class="ssub">Simple, structuré, sans allers-retours inutiles. Tu restes concentré sur ton cœur de métier.</p>
+
+    <div class="process">
+      <div class="ps">
+        <div class="ps-num">01</div>
+        <div class="ps-body">
+          <h4>Mois 1 — Audit & fondations</h4>
+          <p>Audit technique complet du site, correction des erreurs critiques, sitemap, données structurées. Cartographie sémantique exhaustive des mots-clés enseignes/logos/signalétique. Première analyse LLM : ce que les IA disent sur ton secteur aujourd'hui. On part d'une base propre.</p>
+          <span class="ps-tag pt-v">Technique · Stratégie · GEO Audit</span>
+        </div>
+      </div>
+      <div class="ps">
+        <div class="ps-num">02</div>
+        <div class="ps-body">
+          <h4>Mois 2-3 — Production & backlinks</h4>
+          <p>Lancement des 10 contenus/mois. Ciblage par profil client : auto-entrepreneur, retail, professions libérales, créateurs de contenu. Soumission annuaires BTP sectoriels. Premiers backlinks outreach. Les articles commencent à s'indexer.</p>
+          <span class="ps-tag pt-v">Contenu · Off-page · Indexation</span>
+        </div>
+      </div>
+      <div class="ps">
+        <div class="ps-num">03</div>
+        <div class="ps-body">
+          <h4>Mois 3-6 — Premières positions & ajustements</h4>
+          <p>On voit les premiers mouvements de positions. On double la mise sur ce qui performe, on pivote sur ce qui stagne. Monitoring LLMs mensuel. Optimisation du maillage interne. Les leads SEO commencent à arriver.</p>
+          <span class="ps-tag pt-a">Optimisation · Premiers leads</span>
+        </div>
+      </div>
+      <div class="ps">
+        <div class="ps-num">04</div>
+        <div class="ps-body">
+          <h4>Mois 6-12 — Accélération & scale</h4>
+          <p>Le contenu publié en début de mission commence à prendre de l'autorité. On accélère sur les angles qui fonctionnent. Lettershop commence à apparaître dans les réponses IA. Objectif : réduire progressivement la dépendance aux Ads.</p>
+          <span class="ps-tag pt-g">Scale · AI Search · Leads réguliers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTIONS -->
+<section class="section">
+  <div class="wrap">
+    <span class="slabel">// Projections</span>
+    <h2 class="stitle">À quoi tu peux t'attendre</h2>
+    <p class="ssub">Sans promesse de chiffres exacts — le SEO dépend du secteur, de la concurrence, de Google. Mais voici ce qu'on vise, mois par mois.</p>
+
+    <div class="timeline">
+      <div class="t-block t1">
+        <span class="t-period">Mois 1–2</span>
+        <div class="t-title">Fondations</div>
+        <div class="t-items">
+          <div class="t-item"><span class="t-dot"></span>Site technique clean</div>
+          <div class="t-item"><span class="t-dot"></span>20 premiers contenus indexés</div>
+          <div class="t-item"><span class="t-dot"></span>Présence IA auditée</div>
+        </div>
+        <span class="t-kpi">Base saine</span>
+      </div>
+      <div class="t-block t2">
+        <span class="t-period">Mois 3–4</span>
+        <div class="t-title">Premiers signaux</div>
+        <div class="t-items">
+          <div class="t-item"><span class="t-dot"></span>Positions page 2–3 sur longues traînes</div>
+          <div class="t-item"><span class="t-dot"></span>Trafic organique +15-25%</div>
+          <div class="t-item"><span class="t-dot"></span>Premiers backlinks acquis</div>
+        </div>
+        <span class="t-kpi">~1 500 sessions/mois</span>
+      </div>
+      <div class="t-block t3">
+        <span class="t-period">Mois 5–7</span>
+        <div class="t-title">Accélération</div>
+        <div class="t-items">
+          <div class="t-item"><span class="t-dot"></span>Tops 10 sur requêtes cibles</div>
+          <div class="t-item"><span class="t-dot"></span>Leads SEO réguliers</div>
+          <div class="t-item"><span class="t-dot"></span>Apparition dans LLMs</div>
+        </div>
+        <span class="t-kpi">~2 500 sessions/mois</span>
+      </div>
+      <div class="t-block t4">
+        <span class="t-period">Mois 9–12</span>
+        <div class="t-title">Flux stable</div>
+        <div class="t-items">
+          <div class="t-item"><span class="t-dot"></span>SEO = levier autonome</div>
+          <div class="t-item"><span class="t-dot"></span>Dépendance Ads réduite</div>
+          <div class="t-item"><span class="t-dot"></span>Cité par ChatGPT & Perplexity</div>
+        </div>
+        <span class="t-kpi">+3 000 sessions/mois</span>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;background:rgba(123,92,250,.06);border:1px solid rgba(123,92,250,.15);border-radius:12px;padding:16px 20px;display:flex;gap:12px;align-items:flex-start;font-size:.84rem;color:var(--muted);-webkit-text-fill-color:var(--muted)">
+      <span style="font-size:1.1rem;flex-shrink:0">💡</span>
+      <div>Avec ton taux de conversion actuel de 26%, <strong style="color:rgba(240,244,255,.8);-webkit-text-fill-color:rgba(240,244,255,.8);">1 800 sessions supplémentaires = ~468 demandes de devis supplémentaires par mois</strong>. Un seul contrat à 2 000€ en moyenne rentabilise l'investissement mensuel. L'objectif n'est pas le trafic — c'est les leads.</div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="section">
+  <div class="wrap">
+    <span class="slabel">// Preuve sociale</span>
+    <h2 class="stitle">Ils nous ont fait confiance</h2>
+    <p class="ssub">12 ans de SEO sur des secteurs exigeants — e-commerce, finance, médias, grande distribution. Ce n'est pas notre premier levier à débloquer.</p>
+
+    <div class="cases">
+      <div class="case-card">
+        <span class="case-logo">🏦</span>
+        <div class="case-client">Société Générale</div>
+        <span class="case-sector">Finance · Grande entreprise</span>
+        <div class="case-result">SEO sur un secteur ultra-compétitif. <strong>Stratégie de contenu + sémantique</strong> sur des requêtes à fort enjeu business.</div>
+      </div>
+      <div class="case-card">
+        <span class="case-logo">🏃</span>
+        <div class="case-client">Decathlon</div>
+        <span class="case-sector">E-commerce · Retail</span>
+        <div class="case-result">Architecture de contenu à grande échelle, <strong>milliers de pages optimisées</strong>, stratégie longue traîne sur un catalogue massif.</div>
+      </div>
+      <div class="case-card">
+        <span class="case-logo">🗞️</span>
+        <div class="case-client">Le Point</div>
+        <span class="case-sector">Média · Editorial</span>
+        <div class="case-result">SEO éditorial, <strong>contenu optimisé pour Google News</strong> et visibilité AI Search sur des sujets d'actualité.</div>
+      </div>
+      <div class="case-card">
+        <span class="case-logo">🎁</span>
+        <div class="case-client">Pluxee / Sodexo</div>
+        <span class="case-sector">RH · SaaS · B2B</span>
+        <div class="case-result">740 landing pages planifiées, <strong>mapping sémantique complet</strong>, SEO sur des requêtes B2B à forte valeur.</div>
+      </div>
+      <div class="case-card">
+        <span class="case-logo">⚡</span>
+        <div class="case-client">BeTomorrow</div>
+        <span class="case-sector">Tech · Agence digitale</span>
+        <div class="case-result">6 mois de SEO + netlinking, <strong>contrat 1 000 €/mois</strong>, montée en positions sur des requêtes tech B2B.</div>
+      </div>
+      <div class="case-card">
+        <span class="case-logo">🔧</span>
+        <div class="case-client">Stirweld</div>
+        <span class="case-sector">Industrie · Niche B2B</span>
+        <div class="case-result">Site multilingue FSW, <strong>outreach presse spécialisée</strong>, citations dans des publications industrielles internationales.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTISSEMENT -->
+<section class="section">
+  <div class="wrap">
+    <span class="slabel">// Investissement</span>
+    <h2 class="stitle">Ce que ça coûte. Ce que ça rapporte.</h2>
+    <p class="ssub">Un seul contrat gagné via ce dispositif — et c'est rentabilisé. Sur 12 mois, l'équation est simple.</p>
+
+    <div class="invest-card">
+      <div class="invest-header">
+        <div class="invest-title">Pack SEO & AI Search — 12 mois</div>
+        <div class="invest-sub">3 jours/mois dédiés · 1 call mensuel · Production IA augmentée · Reporting complet</div>
+      </div>
+      <div class="invest-rows">
+        <div class="invest-row">
+          <div class="invest-row-left">
+            <div class="invest-icon ii-v">📝</div>
+            <div>
+              <span class="invest-label">10 contenus SEO / mois</span>
+              <span class="invest-detail">Articles · Landing pages · Maillage interne · Recherche mots-clés</span>
+            </div>
+          </div>
+          <span class="invest-price" style="color:var(--vl);-webkit-text-fill-color:var(--vl)">inclus</span>
+        </div>
+        <div class="invest-row">
+          <div class="invest-row-left">
+            <div class="invest-icon ii-a">🔧</div>
+            <div>
+              <span class="invest-label">Correction technique & sitemap</span>
+              <span class="invest-detail">Audit · Core Web Vitals · Schema.org · Architecture</span>
+            </div>
+          </div>
+          <span class="invest-price" style="color:var(--amber);-webkit-text-fill-color:var(--amber)">inclus</span>
+        </div>
+        <div class="invest-row">
+          <div class="invest-row-left">
+            <div class="invest-icon ii-b">🔗</div>
+            <div>
+              <span class="invest-label">Backlinks & annuaires sectoriels</span>
+              <span class="invest-detail">Annuaires BTP · Outreach presse · Forums professionnels</span>
+            </div>
+          </div>
+          <span class="invest-price" style="color:#60a5fa;-webkit-text-fill-color:#60a5fa">inclus</span>
+        </div>
+        <div class="invest-row">
+          <div class="invest-row-left">
+            <div class="invest-icon ii-g">🤖</div>
+            <div>
+              <span class="invest-label">Visibilité LLMs & AI Search</span>
+              <span class="invest-detail">GEO · llms.txt · Citations off-site · Monitoring mensuel</span>
+            </div>
+          </div>
+          <span class="invest-price" style="color:var(--green);-webkit-text-fill-color:var(--green)">inclus</span>
+        </div>
+        <div class="invest-row">
+          <div class="invest-row-left">
+            <div class="invest-icon ii-v">📊</div>
+            <div>
+              <span class="invest-label">Reporting & call mensuel</span>
+              <span class="invest-detail">45 min · Dashboard positions · Trafic · LLMs · Backlinks</span>
+            </div>
+          </div>
+          <span class="invest-price" style="color:var(--vl);-webkit-text-fill-color:var(--vl)">inclus</span>
+        </div>
+      </div>
+      <div class="invest-total">
+        <div>
+          <div class="invest-total-label">Investissement mensuel</div>
+          <div style="font-family:var(--M);font-size:.72rem;color:var(--dim);-webkit-text-fill-color:var(--dim);margin-top:3px;">Engagement 12 mois · Facturation mensuelle</div>
+        </div>
+        <div class="invest-total-price">1 500 € <span>HT/mois</span></div>
+      </div>
+    </div>
+
+    <!-- GARANTIE / PORTE DE SORTIE -->
+    <div class="garantie">
+      <div class="gar-card exit">
+        <span class="gar-icon">🚪</span>
+        <div>
+          <div class="gar-title">Porte de sortie — Mois 1</div>
+          <div class="gar-desc">Si à la fin du 1er mois la collaboration ne te correspond pas — sur la méthode, le feeling, l'organisation — on s'arrête là, sans condition. Pas de pression. On avance que si on est alignés.</div>
+        </div>
+      </div>
+      <div class="gar-card commit">
+        <span class="gar-icon">✅</span>
+        <div>
+          <div class="gar-title">Engagement 12 mois — si ça match</div>
+          <div class="gar-desc">Le SEO a besoin de temps. 12 mois c'est le bon horizon pour construire un levier durable. Si le mois 1 est satisfaisant, on signe pour 12 mois et on met les gaz.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI DÉCUPLER -->
+<section class="section">
+  <div class="wrap">
+    <span class="slabel">// Pourquoi Décupler</span>
+    <h2 class="stitle">Ce qui change avec nous</h2>
+
+    <div class="trust-grid">
+      <div class="trust-card">
+        <span class="trust-icon">⚡</span>
+        <div class="trust-title">Humain + IA = ×10 la production</div>
+        <div class="trust-desc">On produit 10 contenus/mois avec SEO AI Systems™ — validés, optimisés, publiables. Ton agence actuelle en produit 2-4 pour le même budget. C'est 5× plus de carburant pour Google.</div>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">🤖</span>
+        <div class="trust-title">Pionnier GEO en France</div>
+        <div class="trust-desc">On est parmi les rares à avoir une vraie méthodologie pour apparaître dans ChatGPT, Perplexity et Gemini. Tes concurrents n'y pensent pas encore. C'est une fenêtre qui se fermera.</div>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">🎯</span>
+        <div class="trust-title">Spécialiste B2B à fort ticket</div>
+        <div class="trust-desc">Pas une agence généraliste. On travaille sur des secteurs où le SEO de masse ne fonctionne pas. Lettershop, c'est exactement notre terrain — niche, B2B, panier élevé, conversion forte.</div>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">📊</span>
+        <div class="trust-title">Reporting sans jargon</div>
+        <div class="trust-desc">Chaque mois : positions, trafic, citations LLMs, backlinks, prochaine action. Pas un rapport de 40 pages illisibles. Tu sais exactement ce qui a été fait et ce que ça a produit.</div>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">🔒</span>
+        <div class="trust-title">Transition en douceur</div>
+        <div class="trust-desc">Tu peux arrêter ton agence actuelle dès que tu es prêt. On peut démarrer sans attendre — le mois 1 d'audit n'interfère pas avec ce qui tourne. Pas de rupture brutale.</div>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">📈</span>
+        <div class="trust-title">SG · Decathlon · Pluxee · Le Point</div>
+        <div class="trust-desc">12 ans de SEO sur des comptes exigeants. On sait gérer la pression des résultats, la complexité des secteurs de niche, et les budgets où chaque euro doit se justifier.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-block">
+      <div class="eyebrow" style="justify-content:center;margin-bottom:18px">On avance ou on n'avance pas — mais on décide maintenant.</div>
+      <h2>Prêt à débloquer le SEO<br>de Lettershop ?</h2>
+      <p>Le mois 1 ne t'engage à rien au-delà. Si ça matche, on signe 12 mois et on met les gaz. Si non, on s'arrête proprement. Ce qu'on veut éviter, c'est le flou.</p>
+      <div class="cta-btns">
+        <a href="https://calendly.com/fenina-nathan/consultationstrategique" target="_blank" class="btn btn-v">📅 Confirmer le démarrage</a>
+        <a href="mailto:nathan@decupler.com" class="btn btn-ghost">✉️ Une question avant ?</a>
+      </div>
+      <div class="cta-validity">Offre valable jusqu'au <strong>15 mai 2026</strong> · Tarif Early Bird 1 500 € HT/mois</div>
+    </div>
+
+    <div class="author-bar">
+      <div class="author-avatar"><img src="https://decupler.com/wp-content/uploads/2025/08/1736001015942.jpeg" alt="Nathan Fenina"></div>
+      <div>
+        <div class="author-name">Nathan Fenina</div>
+        <div class="author-bio">Fondateur Décupler · 14 ans SEO · Société Générale, Decathlon, Le Point, Pluxee, Sodexo<br>Expert GEO · Créateur SEO AI Systems™ · Top 20 SEO France</div>
+      </div>
+      <div class="author-links">
+        <a href="https://www.linkedin.com/in/nathanfenina" target="_blank" class="author-link al-li">LinkedIn</a>
+        <a href="https://decupler.substack.com" target="_blank" class="author-link al-sub">Substack</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Décupler · SIRU 927 480 319 00031 · Proposition confidentielle pour Philippe Dupuy / Lettershop</p>
+  </div>
+</footer>
+
+</body>
+</html>
