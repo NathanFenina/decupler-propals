@@ -161,7 +161,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-
 .cs-label{font-family:var(--M);font-size:10px;font-weight:600;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;margin-top:6px;display:block}
 
 /* SEMRUSH SCREENSHOT BLOCK */
-.screen-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.screen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
 .screen-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
 .screen-card img{width:100%;height:auto;display:block}
 .screen-caption{padding:12px 16px;font-family:var(--M);font-size:11px;color:var(--text-mid);background:var(--bg-soft);border-top:1px solid var(--border);font-weight:600}
@@ -328,7 +328,7 @@ footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-
     <div class="hero-headline-box">
       <div class="eyebrow">📋 11 mai 2026 · pour Fer-Tendance</div>
       <h1>Le marché de l'escalier fait <span class="hl-v">2,98M de recherches/mois</span>.<br>Vous en captez <span class="hl-r">698</span>.</h1>
-      <p class="hero-sub">Pendant que <strong>oeba.fr</strong> capte 37 600 visites/mois et <strong>woodup.fr</strong> 67 000, fer-tendance.fr stagne sous les 700 et perd des mots-clés chaque mois. <strong>Voici le plan pour reprendre la place qui vous revient — sur 12 puis 24 mois.</strong></p>
+      <p class="hero-sub">Pendant que <strong>oeba.fr</strong> capte 38 700 visites/mois et <strong>woodup.fr</strong> 66 400, fer-tendance.fr stagne sous les 700 et perd des mots-clés chaque mois. <strong>Voici le plan pour reprendre la place qui vous revient — sur 12 puis 24 mois.</strong></p>
     </div>
 
     <!-- INTRO BIO BAR -->
@@ -342,9 +342,9 @@ footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-
         </div>
       </div>
       <div class="intro-card">
-        <!-- Photo Nathan : remplacer src par URL publique de la photo (ex: ../assets/nathan.jpg) -->
+        <!-- Photo Nathan : remplacer src par URL publique de la photo (ex: ../assets/nathan.png) -->
         <div class="intro-avatar av-nathan">
-          <img src="../assets/nathan.jpg" alt="Nathan Fenina" onerror="this.style.display='none';this.parentElement.innerHTML='NF'"/>
+          <img src="../assets/nathan.png" alt="Nathan Fenina" onerror="this.style.display='none';this.parentElement.innerHTML='NF'"/>
         </div>
         <div>
           <span class="intro-label">Par</span>
@@ -362,12 +362,12 @@ footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-
     <div class="trust-bar">
       <div class="trust-label">Ils nous ont fait confiance</div>
       <div class="trust-logos">
-        <!-- Logos : remplacer les src par les URLs publiques (ex: ../assets/logos/decathlon.svg) -->
-        <img class="trust-logo-img" src="../assets/logos/decathlon.svg" alt="Decathlon" onerror="this.outerHTML='<span class=trust-logo>DECATHLON</span>'"/>
-        <img class="trust-logo-img" src="../assets/logos/societe-generale.svg" alt="Société Générale" onerror="this.outerHTML='<span class=trust-logo>SOCIÉTÉ GÉNÉRALE</span>'"/>
-        <img class="trust-logo-img" src="../assets/logos/le-point.svg" alt="Le Point" onerror="this.outerHTML='<span class=trust-logo>LE POINT</span>'"/>
-        <img class="trust-logo-img" src="../assets/logos/sodexo.svg" alt="Sodexo" onerror="this.outerHTML='<span class=trust-logo>SODEXO</span>'"/>
-        <img class="trust-logo-img" src="../assets/logos/pluxee.svg" alt="Pluxee" onerror="this.outerHTML='<span class=trust-logo>PLUXEE</span>'"/>
+        <!-- Logos en texte pour l'instant — remplacer par des <img> une fois les SVG/PNG dans ../assets/logos/ -->
+        <span class="trust-logo">DECATHLON</span>
+        <span class="trust-logo">SOCIÉTÉ GÉNÉRALE</span>
+        <span class="trust-logo">LE POINT</span>
+        <span class="trust-logo">SODEXO</span>
+        <span class="trust-logo">PLUXEE</span>
       </div>
     </div>
   </div>
@@ -384,7 +384,7 @@ footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-
       <div class="tri-card tri-prob">
         <span class="tri-icon">📉</span>
         <h3 class="tri-title">Le problème</h3>
-        <p class="tri-text">Marché de l'escalier : <strong>2,98M de recherches/mois</strong>, difficulté moyenne <strong>16%</strong>. Vous captez 698 visites et perdez <strong>14% de mots-clés</strong>. Vos concurrents directs vous dépassent de <strong>×54 (oeba)</strong> et <strong>×96 (woodup)</strong>. Sur ChatGPT, vous êtes cité <strong>3 fois</strong>. Eux : 48+.</p>
+        <p class="tri-text">Marché de l'escalier : <strong>2,98M de recherches/mois</strong>, difficulté moyenne <strong>16%</strong>. Vous captez 698 visites et perdez <strong>14% de mots-clés</strong>. Vos concurrents directs vous dépassent de <strong>×55 (oeba)</strong> et <strong>×95 (woodup)</strong>. Sur les IA (toutes plateformes), vous êtes cité <strong>3 fois</strong>. Eux : <strong>71 (oeba)</strong> et <strong>57 (woodup)</strong>.</p>
       </div>
       <div class="tri-card tri-sol">
         <span class="tri-icon">🛠️</span>
@@ -419,8 +419,8 @@ footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-
           <span class="diag-label">Mots-clés (3 derniers mois)</span>
         </div>
         <div class="diag-stat">
-          <span class="diag-num">3 vs 48</span>
-          <span class="diag-label">Mentions ChatGPT vs oeba.fr</span>
+          <span class="diag-num">3 vs 71</span>
+          <span class="diag-label">Mentions IA vs oeba.fr</span>
         </div>
       </div>
       <div class="pain-list">
@@ -442,14 +442,16 @@ footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-
     <!-- CAPTURES SEMRUSH -->
     <div class="screen-grid">
       <div class="screen-card">
-        <!-- Capture SEMrush fer-tendance.fr - à uploader dans assets/screenshots/ -->
-        <img src="./screenshots/semrush-fer-tendance.png" alt="SEMrush Fer-Tendance" onerror="this.parentElement.style.background='var(--bg-red-soft)';this.parentElement.innerHTML='<div style=\'padding:60px 20px;text-align:center;color:var(--red);font-family:var(--M);font-size:.85rem\'>📸 Capture SEMrush fer-tendance.fr<br><span style=\'font-size:.7rem;opacity:.7\'>(à ajouter dans ./screenshots/)</span></div>'"/>
-        <div class="screen-caption"><strong>Fer-Tendance</strong> · Trafic 698, mots-clés -14%, AS 16</div>
+        <img src="./fer-tendance.fr.png" alt="SEMrush Fer-Tendance"/>
+        <div class="screen-caption"><strong>Fer-Tendance</strong> · 698 trafic, 309 mots-clés, AS 16, 3 mentions IA</div>
       </div>
       <div class="screen-card">
-        <!-- Capture SEMrush oeba.fr -->
-        <img src="./screenshots/semrush-oeba.png" alt="SEMrush Oeba" onerror="this.parentElement.style.background='var(--bg-violet-soft)';this.parentElement.innerHTML='<div style=\'padding:60px 20px;text-align:center;color:var(--violet);font-family:var(--M);font-size:.85rem\'>📸 Capture SEMrush oeba.fr<br><span style=\'font-size:.7rem;opacity:.7\'>(à ajouter dans ./screenshots/)</span></div>'"/>
-        <div class="screen-caption"><strong>oeba.fr</strong> · Trafic 37,6K, mots-clés 7,8K, AS 31</div>
+        <img src="./oeba.fr.png" alt="SEMrush Oeba"/>
+        <div class="screen-caption"><strong>oeba.fr</strong> · 38,7K trafic, 9K mots-clés, AS 31, 71 mentions IA</div>
+      </div>
+      <div class="screen-card">
+        <img src="./woodup.fr.png" alt="SEMrush Woodup"/>
+        <div class="screen-caption"><strong>woodup.fr</strong> · 66,4K trafic, 21K mots-clés, AS 31, 57 mentions IA</div>
       </div>
     </div>
 
@@ -552,7 +554,7 @@ footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-
         </div>
       </div>
     </div>
-    <div class="conclusion">→ <strong>Hypothèse :</strong> rattrapage progressif en ciblant en priorité les requêtes <strong>"escalier quart tournant" (14,8K vol, KD 19)</strong>, <strong>"escalier escamotable" (9,9K, KD 25)</strong>, <strong>"rambarde escalier" (8,1K, KD 17)</strong> et le métier cœur <strong>"escalier métallique" (1,3K, KD 15)</strong>. Toutes en KD < 25 = atteignables en 6-12 mois. Le pallier de 5K à 24 mois est en deçà de oeba.fr (37,6K) et woodup.fr (67K) — il y a encore beaucoup de marge ensuite.</div>
+    <div class="conclusion">→ <strong>Hypothèse :</strong> rattrapage progressif en ciblant en priorité les requêtes <strong>"escalier quart tournant" (14,8K vol, KD 19)</strong>, <strong>"escalier escamotable" (9,9K, KD 25)</strong>, <strong>"rambarde escalier" (8,1K, KD 17)</strong> et le métier cœur <strong>"escalier métallique" (1,3K, KD 15)</strong>. Toutes en KD < 25 = atteignables en 6-12 mois. Le palier de 5K à 24 mois reste en deçà de oeba.fr (38,7K) et woodup.fr (66,4K) — il y a encore beaucoup de marge ensuite.</div>
   </div>
 </section>
 
@@ -592,12 +594,12 @@ footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-
           </thead>
           <tbody>
             <tr><td><span class="label">Fer-Tendance (vous)</span></td><td><span class="you">698</span></td><td><span class="you">309</span></td><td><span class="you">827</span></td><td><span class="you">3</span></td></tr>
-            <tr><td><span class="label">oeba.fr</span></td><td><span class="compet">37 600</span></td><td><span class="compet">7 800</span></td><td><span class="compet">9 900</span></td><td><span class="compet">48</span></td></tr>
-            <tr><td><span class="label">woodup.fr</span></td><td><span class="compet">67 000</span></td><td><span class="todo">[à compléter]</span></td><td><span class="todo">[à compléter]</span></td><td><span class="todo">[à compléter]</span></td></tr>
+            <tr><td><span class="label">oeba.fr</span></td><td><span class="compet">38 700</span></td><td><span class="compet">9 000</span></td><td><span class="compet">9 900</span></td><td><span class="compet">71</span></td></tr>
+            <tr><td><span class="label">woodup.fr</span></td><td><span class="compet">66 400</span></td><td><span class="compet">21 000</span></td><td><span class="compet">6 400</span></td><td><span class="compet">57</span></td></tr>
           </tbody>
         </table>
       </div>
-      <div class="conclusion">→ <strong>Conclusion :</strong> oeba.fr fait <strong>×54 votre trafic</strong>, woodup.fr <strong>×96</strong>. Le gap est massif. <strong>Mais la difficulté moyenne du marché est de 16%</strong> — c'est un secteur où la place est encore disponible pour qui s'organise.</div>
+      <div class="conclusion">→ <strong>Conclusion :</strong> oeba.fr fait <strong>×55 votre trafic</strong>, woodup.fr <strong>×95</strong>. Sur les IA, le gap est encore plus violent : <strong>×24 (oeba) et ×19 (woodup) vos mentions</strong>. La fenêtre IA est en train de se figer — mais le secteur reste accessible (KD moyen 16%).</div>
     </div>
 
     <div class="math-block">
@@ -619,11 +621,6 @@ footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-
       <div class="conclusion">→ <strong>87 900 recherches/mois cumulées</strong> sur ces 11 mots-clés stratégiques. CTR moyen 10% en position 3-5 = potentiel ~8 800 visites/mois. Majorité en KD < 25 = très atteignable.</div>
     </div>
 
-    <!-- CAPTURE SEMRUSH MOTS-CLÉS -->
-    <div class="screen-card" style="margin-top:20px">
-      <img src="./screenshots/semrush-keywords-escalier.png" alt="SEMrush mots-clés escalier" onerror="this.parentElement.style.background='var(--bg-amber-soft)';this.parentElement.innerHTML='<div style=\'padding:60px 20px;text-align:center;color:var(--amber);font-family:var(--M);font-size:.85rem\'>📸 Capture SEMrush — top mots-clés escalier<br><span style=\'font-size:.7rem;opacity:.7\'>(à ajouter dans ./screenshots/)</span></div>'"/>
-      <div class="screen-caption"><strong>Données SEMrush</strong> · 384K mots-clés, 2,98M vol mensuel, KD moyen 16%</div>
-    </div>
   </div>
 </section>
 
@@ -667,7 +664,7 @@ footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-
     <div class="nathan-block">
       <!-- Photo Nathan : URL publique (LinkedIn, decupler.com, ou repo public) -->
       <div class="nathan-photo">
-        <img src="../assets/nathan.jpg" alt="Nathan Fenina" onerror="this.style.display='none';this.parentElement.innerHTML='NF'"/>
+        <img src="../assets/nathan.png" alt="Nathan Fenina" onerror="this.style.display='none';this.parentElement.innerHTML='NF'"/>
       </div>
       <div class="nathan-info">
         <h3>Nathan Fenina</h3>
