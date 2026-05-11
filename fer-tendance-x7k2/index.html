@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Proposition Décupler × Fer-Tendance — SEO & AI Search</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fafbfc;
+  --bg-card:#ffffff;
+  --bg-soft:#f1f5f9;
+  --bg-violet-soft:#f5f3ff;
+  --bg-green-soft:#ecfdf5;
+  --bg-red-soft:#fef2f2;
+  --bg-amber-soft:#fffbeb;
+  --bg-blue-soft:#eff6ff;
+  --text:#0f172a;
+  --text-mid:#475569;
+  --text-soft:#64748b;
+  --text-mute:#94a3b8;
+  --border:#e2e8f0;
+  --border-strong:#cbd5e1;
+  --violet:#7B5CFA;
+  --violet-2:#667eea;
+  --violet-light:#a78bfa;
+  --green:#10b981;
+  --green-2:#059669;
+  --red:#ef4444;
+  --amber:#f59e0b;
+  --blue:#3b82f6;
+  --F:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --M:'JetBrains Mono',monospace;
+  --shadow-sm:0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 16px rgba(15,23,42,.06);
+  --shadow-md:0 8px 24px rgba(15,23,42,.08);
+  --shadow-lg:0 12px 32px rgba(15,23,42,.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--F);background:var(--bg);color:var(--text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{color:var(--text);line-height:1.15;font-weight:800;letter-spacing:-.02em}
+p{color:var(--text-mid)}
+a{color:var(--violet);text-decoration:none}
+ul{list-style:none}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.nav-logo{font-size:15px;font-weight:800}
+.nav-logo .dot{color:var(--violet)}
+.nav-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--M);font-size:11px;font-weight:600;color:var(--green-2);background:var(--bg-green-soft);border:1px solid #a7f3d0;padding:5px 12px;border-radius:20px}
+.nav-tag .dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.nav-cta{padding:9px 18px;background:var(--violet);color:#fff;font-size:13px;font-weight:700;border-radius:8px;transition:background .2s}
+.nav-cta:hover{background:var(--violet-2);color:#fff}
+
+/* HERO */
+.hero{padding:48px 0 40px}
+.hero-title-mega{font-family:var(--M);font-size:13px;font-weight:700;color:var(--violet);letter-spacing:.3em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:14px}
+.hero-title-mega::before, .hero-title-mega::after{content:'';flex:0 0 36px;height:2px;background:var(--violet);opacity:.4}
+.hero-title-mega::after{flex:1}
+.hero-headline-box{padding:40px 0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--bg-violet-soft);border:1px solid #ddd6fe;color:var(--violet);font-family:var(--M);font-size:11px;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.06em;text-transform:uppercase}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:900;margin-bottom:18px;line-height:1.1}
+.hl-v{color:var(--violet)}
+.hl-r{color:var(--red)}
+.hl-g{color:var(--green)}
+.hero-sub{font-size:1.05rem;max-width:680px;margin-bottom:32px;line-height:1.65}
+.hero-sub strong{color:var(--text)}
+
+/* INTRO BIO */
+.intro-bar{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:0}
+.intro-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-sm)}
+.intro-avatar{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0;overflow:hidden;background-size:cover;background-position:center}
+.av-client{background:linear-gradient(135deg,#64748b,#334155)}
+.av-nathan{background:linear-gradient(135deg,#7B5CFA,#5b21b6)}
+.av-nathan img{width:100%;height:100%;object-fit:cover}
+.intro-label{font-family:var(--M);font-size:10px;font-weight:600;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:2px}
+.intro-name{font-size:14px;font-weight:700;color:var(--text)}
+.intro-bio{font-size:12px;color:var(--text-soft);margin-top:1px;line-height:1.4}
+
+/* SECTION */
+.section{padding:72px 0;border-top:1px solid var(--border)}
+.section-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--M);font-size:10px;font-weight:600;color:var(--violet);background:var(--bg-violet-soft);padding:5px 12px;border-radius:20px;margin-bottom:14px;letter-spacing:.08em;text-transform:uppercase}
+.section h2{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
+.section .lead{font-size:1rem;color:var(--text-mid);max-width:680px;margin-bottom:36px;line-height:1.65}
+
+/* TRUST BAR (logos) */
+.trust-bar{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px 26px;box-shadow:var(--shadow-sm);text-align:center}
+.trust-label{font-family:var(--M);font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;font-weight:600}
+.trust-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:24px 36px}
+.trust-logo-img{height:32px;width:auto;max-width:140px;object-fit:contain;opacity:.7;filter:grayscale(1);transition:opacity .2s,filter .2s}
+.trust-logo-img:hover{opacity:1;filter:none}
+.trust-logo{font-size:.92rem;color:var(--text);font-weight:700;letter-spacing:-.01em;opacity:.7}
+
+/* PROB SOL DREAM */
+.triptych{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:stretch}
+.tri-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.tri-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.tri-prob::before{background:linear-gradient(90deg,var(--red),var(--amber))}
+.tri-sol::before{background:linear-gradient(90deg,var(--violet),var(--violet-light))}
+.tri-dream::before{background:linear-gradient(90deg,var(--green),var(--green-2))}
+.tri-icon{font-size:1.6rem;margin-bottom:12px;display:block}
+.tri-title{font-size:1rem;font-weight:800;margin-bottom:10px}
+.tri-prob .tri-title{color:var(--red)}
+.tri-sol .tri-title{color:var(--violet)}
+.tri-dream .tri-title{color:var(--green-2)}
+.tri-text{font-size:.88rem;color:var(--text-mid);line-height:1.6;flex:1}
+.tri-text strong{color:var(--text);font-weight:700}
+
+/* DIAG EMO */
+.diag-emo{background:var(--bg-card);border:1px solid var(--border);border-radius:18px;padding:32px;margin-bottom:20px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.diag-emo::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--amber))}
+.diag-title{font-size:1.05rem;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.diag-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+.diag-stat{background:var(--bg-red-soft);border:1px solid #fecaca;border-radius:12px;padding:18px;text-align:center}
+.diag-num{font-size:1.7rem;font-weight:900;color:var(--red);line-height:1;display:block}
+.diag-label{font-family:var(--M);font-size:10px;font-weight:600;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;margin-top:6px;display:block}
+.pain-list{display:flex;flex-direction:column;gap:10px}
+.pain-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--bg-red-soft);border:1px solid #fecaca;border-radius:10px;font-size:.92rem;color:var(--text-mid);line-height:1.55}
+.pain-item::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:7px}
+.pain-item strong{color:var(--text);font-weight:600}
+
+/* OPP DESIRED */
+.opp-desired{background:linear-gradient(135deg,var(--bg-green-soft),var(--bg-violet-soft));border:1px solid #c7d2fe;border-radius:18px;padding:32px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.opp-desired::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--violet))}
+.opp-desired h3{font-size:1.05rem;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.opp-text{font-size:.95rem;color:var(--text-mid);line-height:1.65;margin-bottom:18px}
+.opp-text strong{color:var(--green-2);font-weight:700}
+.opp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.opp-stat{text-align:center;padding:14px;background:rgba(255,255,255,.5);border-radius:10px;border:1px solid rgba(16,185,129,.15)}
+.opp-num{font-size:1.6rem;font-weight:900;color:var(--green-2);line-height:1;display:block}
+.opp-label{font-family:var(--M);font-size:10px;font-weight:600;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;margin-top:6px;display:block}
+
+/* CHART */
+.chart-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:var(--shadow-sm);margin-bottom:20px}
+.chart-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;flex-wrap:wrap;gap:14px}
+.chart-title{font-size:1.05rem;font-weight:800}
+.chart-legend{display:flex;gap:16px;font-family:var(--M);font-size:11px;font-weight:600;flex-wrap:wrap}
+.leg-item{display:inline-flex;align-items:center;gap:6px;color:var(--text-mid)}
+.leg-dot{width:10px;height:3px;border-radius:2px}
+.leg-now{background:var(--red)}
+.leg-proj{background:var(--green)}
+.leg-comp{background:var(--violet-light)}
+.chart-svg{width:100%;height:auto;display:block}
+.chart-footer{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.chart-stat{padding:14px;border-radius:10px;text-align:center;border:1px solid var(--border)}
+.cs-now{background:var(--bg-red-soft);border-color:#fecaca}
+.cs-12m{background:var(--bg-violet-soft);border-color:#ddd6fe}
+.cs-24m{background:var(--bg-green-soft);border-color:#a7f3d0}
+.cs-num{font-size:1.4rem;font-weight:900;line-height:1;display:block}
+.cs-now .cs-num{color:var(--red)}
+.cs-12m .cs-num{color:var(--violet)}
+.cs-24m .cs-num{color:var(--green-2)}
+.cs-label{font-family:var(--M);font-size:10px;font-weight:600;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;margin-top:6px;display:block}
+
+/* SEMRUSH SCREENSHOT BLOCK */
+.screen-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.screen-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.screen-card img{width:100%;height:auto;display:block}
+.screen-caption{padding:12px 16px;font-family:var(--M);font-size:11px;color:var(--text-mid);background:var(--bg-soft);border-top:1px solid var(--border);font-weight:600}
+.screen-caption strong{color:var(--text)}
+
+/* MATH TABLES */
+.math-block{margin-bottom:32px}
+.math-block h3{font-size:1.05rem;font-weight:700;margin-bottom:14px}
+.math-table{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.math-table table{width:100%;border-collapse:collapse}
+.math-table th, .math-table td{padding:13px 18px;text-align:left;font-size:.88rem;border-bottom:1px solid var(--border)}
+.math-table th{font-family:var(--M);font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;background:var(--bg-soft);font-weight:600}
+.math-table tbody tr:last-child td{border-bottom:none}
+.math-table tbody tr:hover{background:var(--bg-soft)}
+.math-table .label{color:var(--text);font-weight:600}
+.math-table .you{color:var(--red);font-weight:700;font-family:var(--M)}
+.math-table .target{color:var(--green-2);font-weight:700;font-family:var(--M)}
+.math-table .compet{color:var(--violet);font-family:var(--M);font-weight:600}
+.math-table .neutral{color:var(--text-mid);font-family:var(--M)}
+.math-table .todo{color:var(--amber);font-family:var(--M);font-style:italic}
+.conclusion{background:var(--bg-violet-soft);border:1px solid #ddd6fe;border-radius:12px;padding:18px 20px;font-size:.92rem;color:var(--text-mid);line-height:1.65;margin-top:14px}
+.conclusion strong{color:var(--text)}
+
+/* IA PROMPT */
+.ia-mockup{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:0;box-shadow:var(--shadow-sm);overflow:hidden}
+.ia-head{padding:14px 22px;background:var(--bg-soft);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;font-family:var(--M);font-size:11px;font-weight:600;color:var(--text-mid)}
+.ia-dot{width:10px;height:10px;border-radius:50%}
+.ia-dot.r{background:#ef4444}.ia-dot.y{background:#f59e0b}.ia-dot.g{background:#10b981}
+.ia-body{padding:24px 26px}
+.ia-prompt{font-size:.9rem;color:var(--text);font-weight:600;background:var(--bg-blue-soft);border-left:3px solid var(--blue);padding:12px 16px;border-radius:6px;margin-bottom:18px;font-family:var(--M)}
+.ia-prompt::before{content:'> ';color:var(--blue);font-weight:800}
+.ia-response{font-size:.92rem;color:var(--text-mid);line-height:1.7}
+.ia-response p{margin-bottom:10px;color:var(--text-mid)}
+.ia-cite{display:inline-block;background:var(--bg-violet-soft);color:var(--violet);font-family:var(--M);font-size:.78rem;font-weight:700;padding:2px 8px;border-radius:4px;margin:0 2px}
+.ia-missing{display:inline-block;background:var(--bg-red-soft);color:var(--red);font-family:var(--M);font-size:.78rem;font-weight:700;padding:2px 8px;border-radius:4px;margin:0 2px;text-decoration:line-through}
+.ia-verdict{margin-top:22px;padding:16px 18px;background:var(--bg-red-soft);border:1px solid #fecaca;border-radius:10px;font-size:.9rem;color:var(--text-mid);line-height:1.6}
+.ia-verdict strong{color:var(--red)}
+
+/* NATHAN */
+.nathan-block{display:grid;grid-template-columns:280px 1fr;gap:28px;background:var(--bg-card);border:1px solid var(--border);border-radius:18px;padding:32px;box-shadow:var(--shadow-sm);align-items:center}
+.nathan-photo{aspect-ratio:1;border-radius:16px;background:linear-gradient(135deg,#7B5CFA,#5b21b6);display:flex;align-items:center;justify-content:center;font-size:3.5rem;font-weight:900;color:#fff;letter-spacing:-.04em;box-shadow:var(--shadow-md);overflow:hidden;position:relative}
+.nathan-photo img{width:100%;height:100%;object-fit:cover}
+.nathan-info h3{font-size:1.4rem;font-weight:900;margin-bottom:6px}
+.nathan-role{font-family:var(--M);font-size:12px;color:var(--violet);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;display:block}
+.nathan-desc{font-size:.95rem;color:var(--text-mid);line-height:1.65;margin-bottom:20px}
+.nathan-desc strong{color:var(--text)}
+.nathan-proofs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.np-card{padding:14px;background:var(--bg-soft);border-radius:10px;border:1px solid var(--border)}
+.np-num{font-size:1.3rem;font-weight:900;color:var(--violet);line-height:1;display:block}
+.np-label{font-family:var(--M);font-size:10px;font-weight:600;color:var(--text-mute);text-transform:uppercase;letter-spacing:.04em;margin-top:6px;display:block}
+.np-sub{font-size:.75rem;color:var(--text-soft);margin-top:4px;display:block;line-height:1.4}
+
+/* KEYWORDS */
+.kw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.kw-card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.kw-name{font-family:var(--M);font-size:.82rem;color:var(--text);font-weight:600}
+.kw-meta{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.kw-vol{font-family:var(--M);font-size:.85rem;color:var(--green-2);font-weight:700}
+.kw-kd{font-family:var(--M);font-size:.7rem;color:var(--text-mute);background:var(--bg-green-soft);padding:1px 6px;border-radius:4px;font-weight:600}
+.kw-kd.med{color:var(--amber);background:var(--bg-amber-soft)}
+.kw-kd.hard{color:var(--red);background:var(--bg-red-soft)}
+
+/* ROADMAP */
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}
+.rm-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:var(--shadow-sm);position:relative}
+.rm-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.rm-1::before{background:var(--blue)}
+.rm-2::before{background:var(--violet)}
+.rm-3::before{background:var(--amber)}
+.rm-4::before{background:var(--green)}
+.rm-period{font-family:var(--M);font-size:11px;font-weight:700;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;display:block}
+.rm-title{font-size:.95rem;font-weight:800;margin-bottom:10px}
+.rm-list{display:flex;flex-direction:column;gap:6px}
+.rm-item{font-size:.78rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:6px;line-height:1.5}
+.rm-item::before{content:'→';color:var(--violet);font-weight:800;flex-shrink:0}
+
+/* USE CASES */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.case-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s}
+.case-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.case-icon{width:42px;height:42px;border-radius:10px;background:var(--bg-violet-soft);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:14px}
+.case-client{font-size:1rem;font-weight:800;margin-bottom:4px}
+.case-sector{font-family:var(--M);font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px;display:block;font-weight:600}
+.case-result{font-size:.88rem;color:var(--text-mid);line-height:1.6}
+.case-result strong{color:var(--green-2);font-weight:700}
+.case-meta{font-family:var(--M);font-size:11px;color:var(--text-mute);margin-top:14px;padding-top:12px;border-top:1px solid var(--border)}
+
+/* PACK (single) */
+.pack-single-wrap{max-width:560px;margin:0 auto}
+.pack-single{background:var(--bg-card);border:2px solid var(--violet);border-radius:20px;padding:36px;box-shadow:0 12px 40px rgba(123,92,250,.18);position:relative;overflow:hidden}
+.pack-single::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--violet),var(--violet-light))}
+.pack-badge{position:absolute;top:14px;right:14px;font-family:var(--M);font-size:9px;font-weight:700;background:var(--violet);color:#fff;padding:4px 12px;border-radius:4px;letter-spacing:.08em;text-transform:uppercase}
+.pack-name{font-size:1.4rem;font-weight:900;margin-bottom:4px}
+.pack-for{font-family:var(--M);font-size:11px;color:var(--text-mute);margin-bottom:18px;letter-spacing:.04em;text-transform:uppercase;font-weight:600}
+.pack-price{font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:4px;color:var(--violet)}
+.pack-price-unit{font-family:var(--M);font-size:12px;color:var(--text-soft);margin-bottom:22px;display:block}
+.pack-features{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.pack-feature{font-size:.92rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:10px;line-height:1.55}
+.pack-feature::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0;margin-top:1px;font-size:1rem}
+.pack-feature strong{color:var(--text);font-weight:700}
+.pack-options{background:var(--bg-soft);border:1px solid var(--border);border-radius:12px;padding:16px 18px;font-size:.86rem;color:var(--text-mid);line-height:1.6;margin-top:8px}
+.pack-options strong{color:var(--text);font-weight:700}
+.pack-options-label{font-family:var(--M);font-size:10px;font-weight:700;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;display:block}
+
+/* GUARANTEE */
+.guard-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.guard-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:var(--shadow-sm)}
+.guard-icon{font-size:1.5rem;margin-bottom:10px;display:block}
+.guard-title{font-size:.98rem;font-weight:800;margin-bottom:6px}
+.guard-desc{font-size:.86rem;color:var(--text-mid);line-height:1.6}
+.guard-desc strong{color:var(--text)}
+
+/* CTA */
+.ctas{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cta-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s,border-color .25s}
+.cta-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--violet-light)}
+.cta-icon{font-size:1.6rem;margin-bottom:10px;display:block}
+.cta-title{font-size:.98rem;font-weight:800;margin-bottom:6px}
+.cta-desc{font-size:.82rem;color:var(--text-mid);line-height:1.55;margin-bottom:14px}
+.cta-btn{display:inline-block;padding:10px 18px;font-family:var(--M);font-size:11px;font-weight:700;border-radius:8px;letter-spacing:.04em;text-transform:uppercase;transition:opacity .2s,transform .15s}
+.cta-btn:hover{opacity:.9;transform:translateY(-1px)}
+.cta-btn.violet{background:var(--violet);color:#fff}
+.cta-btn.green{background:var(--green);color:#fff}
+.cta-btn.amber{background:var(--amber);color:#fff}
+
+/* FOOTER */
+footer{padding:40px 0 32px;text-align:center;border-top:1px solid var(--border);margin-top:40px}
+footer p{font-size:.84rem;color:var(--text-soft);margin-bottom:4px}
+footer p strong{color:var(--text);font-weight:700}
+footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-top:14px}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+  .hero{padding:36px 0 32px}
+  .section{padding:48px 0}
+  .intro-bar{grid-template-columns:1fr}
+  .diag-stats, .opp-stats, .cases, .ctas, .triptych, .nathan-proofs, .screen-grid{grid-template-columns:1fr}
+  .guard-grid, .nathan-block{grid-template-columns:1fr}
+  .roadmap{grid-template-columns:1fr 1fr}
+  .chart-footer{grid-template-columns:1fr}
+  .nav-inner{justify-content:center}
+  .pack-single{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap nav-inner">
+    <div class="nav-logo">Décupler<span class="dot"> ×</span> Fer-Tendance</div>
+    <span class="nav-tag"><span class="dot"></span> Proposition · Mai 2026</span>
+    <a href="https://calendly.com/fenina-nathan/consultationstrategique" target="_blank" rel="noopener" class="nav-cta">Réserver un échange →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+
+    <!-- BIG PROPOSITION LABEL -->
+    <div class="hero-title-mega">Proposition commerciale</div>
+
+    <div class="hero-headline-box">
+      <div class="eyebrow">📋 11 mai 2026 · pour Fer-Tendance</div>
+      <h1>Le marché de l'escalier fait <span class="hl-v">2,98M de recherches/mois</span>.<br>Vous en captez <span class="hl-r">698</span>.</h1>
+      <p class="hero-sub">Pendant que <strong>oeba.fr</strong> capte 37 600 visites/mois et <strong>woodup.fr</strong> 67 000, fer-tendance.fr stagne sous les 700 et perd des mots-clés chaque mois. <strong>Voici le plan pour reprendre la place qui vous revient — sur 12 puis 24 mois.</strong></p>
+    </div>
+
+    <!-- INTRO BIO BAR -->
+    <div class="intro-bar">
+      <div class="intro-card">
+        <div class="intro-avatar av-client">FT</div>
+        <div>
+          <span class="intro-label">Préparé pour</span>
+          <div class="intro-name">Fer-Tendance · fer-tendance.fr</div>
+          <div class="intro-bio">Ferronnerie d'art & escaliers métalliques sur-mesure</div>
+        </div>
+      </div>
+      <div class="intro-card">
+        <!-- Photo Nathan : remplacer src par URL publique de la photo (ex: ../assets/nathan.jpg) -->
+        <div class="intro-avatar av-nathan">
+          <img src="../assets/nathan.jpg" alt="Nathan Fenina" onerror="this.style.display='none';this.parentElement.innerHTML='NF'"/>
+        </div>
+        <div>
+          <span class="intro-label">Par</span>
+          <div class="intro-name">Nathan Fenina · Founder Decupler</div>
+          <div class="intro-bio">14 ans SEO · Decathlon, Société Générale, Le Point</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="section" style="padding-top:48px;padding-bottom:48px">
+  <div class="wrap">
+    <div class="trust-bar">
+      <div class="trust-label">Ils nous ont fait confiance</div>
+      <div class="trust-logos">
+        <!-- Logos : remplacer les src par les URLs publiques (ex: ../assets/logos/decathlon.svg) -->
+        <img class="trust-logo-img" src="../assets/logos/decathlon.svg" alt="Decathlon" onerror="this.outerHTML='<span class=trust-logo>DECATHLON</span>'"/>
+        <img class="trust-logo-img" src="../assets/logos/societe-generale.svg" alt="Société Générale" onerror="this.outerHTML='<span class=trust-logo>SOCIÉTÉ GÉNÉRALE</span>'"/>
+        <img class="trust-logo-img" src="../assets/logos/le-point.svg" alt="Le Point" onerror="this.outerHTML='<span class=trust-logo>LE POINT</span>'"/>
+        <img class="trust-logo-img" src="../assets/logos/sodexo.svg" alt="Sodexo" onerror="this.outerHTML='<span class=trust-logo>SODEXO</span>'"/>
+        <img class="trust-logo-img" src="../assets/logos/pluxee.svg" alt="Pluxee" onerror="this.outerHTML='<span class=trust-logo>PLUXEE</span>'"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIPTYCH -->
+<section class="section" style="padding-top:32px">
+  <div class="wrap">
+    <div class="section-tag">⚡ En une vue</div>
+    <h2>Le problème, la solution, la situation rêvée.</h2>
+    <p class="lead">Avant de plonger dans les chiffres : la trame en trois temps.</p>
+
+    <div class="triptych">
+      <div class="tri-card tri-prob">
+        <span class="tri-icon">📉</span>
+        <h3 class="tri-title">Le problème</h3>
+        <p class="tri-text">Marché de l'escalier : <strong>2,98M de recherches/mois</strong>, difficulté moyenne <strong>16%</strong>. Vous captez 698 visites et perdez <strong>14% de mots-clés</strong>. Vos concurrents directs vous dépassent de <strong>×54 (oeba)</strong> et <strong>×96 (woodup)</strong>. Sur ChatGPT, vous êtes cité <strong>3 fois</strong>. Eux : 48+.</p>
+      </div>
+      <div class="tri-card tri-sol">
+        <span class="tri-icon">🛠️</span>
+        <h3 class="tri-title">La solution</h3>
+        <p class="tri-text">Un plan SEO + GEO structuré sur 12 mois : <strong>12 contenus/mois (articles + pages)</strong>, actions techniques en continu, <strong>10 backlinks/mois</strong> (annuaires + forums + presse), <strong>15 prompts GEO travaillés</strong> sur ChatGPT/Perplexity/Gemini, perf & rapidité optimisées en continu, <strong>12 réunions stratégiques/an</strong>.</p>
+      </div>
+      <div class="tri-card tri-dream">
+        <span class="tri-icon">🚀</span>
+        <h3 class="tri-title">La situation rêvée</h3>
+        <p class="tri-text">À <strong>6 mois</strong> : 1 200 visites/mois. À <strong>12 mois</strong> : <strong>2 500 visites/mois</strong>. À <strong>24 mois</strong> : <strong>5 000 visites/mois</strong>, top 3 sur 15-20 mots-clés clés (escalier métallique, quart tournant, rambarde…), <strong>15+ citations IA</strong>, leads inbound qualifiés sans dépendre de Google Ads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSTIC ÉMOTIONNEL -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">⚠️ Diagnostic — Où vous en êtes</div>
+    <h2>Ce qui se passe <span class="hl-r">aujourd'hui</span> chez Fer-Tendance.</h2>
+    <p class="lead">Pas de jugement, juste les chiffres SEMrush + l'analyse marché. Et ce qui se passe si rien ne bouge.</p>
+
+    <div class="diag-emo">
+      <h3 class="diag-title">📉 État des lieux — la situation actuelle</h3>
+      <div class="diag-stats">
+        <div class="diag-stat">
+          <span class="diag-num">698</span>
+          <span class="diag-label">Trafic SEO / mois</span>
+        </div>
+        <div class="diag-stat">
+          <span class="diag-num">-14%</span>
+          <span class="diag-label">Mots-clés (3 derniers mois)</span>
+        </div>
+        <div class="diag-stat">
+          <span class="diag-num">3 vs 48</span>
+          <span class="diag-label">Mentions ChatGPT vs oeba.fr</span>
+        </div>
+      </div>
+      <div class="pain-list">
+        <div class="pain-item">
+          <span>Vous savez livrer <strong>des escaliers métalliques sur-mesure de qualité</strong> — mais en ligne, vos prospects ne vous trouvent pas. Le bouche-à-oreille a une limite.</span>
+        </div>
+        <div class="pain-item">
+          <span>Authority Score à <strong>16/100</strong>. oeba.fr est à 31, woodup.fr probablement plus haut. Vos concurrents capitalisent sur leur autorité chaque mois pendant que la vôtre stagne.</span>
+        </div>
+        <div class="pain-item">
+          <span>309 mots-clés positionnés, <strong>en baisse de 14%</strong>. Sans intervention, la tendance se poursuit : moins de visibilité, moins de leads, plus de dépendance à la pub ou au B2B.</span>
+        </div>
+        <div class="pain-item">
+          <span>Sur ChatGPT, quand un prospect demande <em>"meilleur fabricant escalier métallique"</em>, ce sont <strong>oeba.fr, escamesure.fr, ascenso.fr</strong> qui apparaissent. Pas vous. Et c'est là que se prennent désormais les premières décisions d'achat.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAPTURES SEMRUSH -->
+    <div class="screen-grid">
+      <div class="screen-card">
+        <!-- Capture SEMrush fer-tendance.fr - à uploader dans assets/screenshots/ -->
+        <img src="./screenshots/semrush-fer-tendance.png" alt="SEMrush Fer-Tendance" onerror="this.parentElement.style.background='var(--bg-red-soft)';this.parentElement.innerHTML='<div style=\'padding:60px 20px;text-align:center;color:var(--red);font-family:var(--M);font-size:.85rem\'>📸 Capture SEMrush fer-tendance.fr<br><span style=\'font-size:.7rem;opacity:.7\'>(à ajouter dans ./screenshots/)</span></div>'"/>
+        <div class="screen-caption"><strong>Fer-Tendance</strong> · Trafic 698, mots-clés -14%, AS 16</div>
+      </div>
+      <div class="screen-card">
+        <!-- Capture SEMrush oeba.fr -->
+        <img src="./screenshots/semrush-oeba.png" alt="SEMrush Oeba" onerror="this.parentElement.style.background='var(--bg-violet-soft)';this.parentElement.innerHTML='<div style=\'padding:60px 20px;text-align:center;color:var(--violet);font-family:var(--M);font-size:.85rem\'>📸 Capture SEMrush oeba.fr<br><span style=\'font-size:.7rem;opacity:.7\'>(à ajouter dans ./screenshots/)</span></div>'"/>
+        <div class="screen-caption"><strong>oeba.fr</strong> · Trafic 37,6K, mots-clés 7,8K, AS 31</div>
+      </div>
+    </div>
+
+    <!-- OPPORTUNITY DESIRED -->
+    <div class="opp-desired">
+      <h3>🎯 La situation désirée à 12-24 mois</h3>
+      <p class="opp-text">Fer-Tendance positionné comme <strong>l'expert reconnu</strong> sur l'escalier métallique sur-mesure. Trafic ×3,5 à 12 mois, ×7 à 24 mois. Cité dans ChatGPT et Perplexity sur les prompts business clés. <strong>Leads qualifiés mensuels en croissance continue</strong> — sans dépendance Google Ads. Un actif (le site + l'autorité) qui prend de la valeur chaque mois.</p>
+      <div class="opp-stats">
+        <div class="opp-stat"><span class="opp-num">2 500</span><span class="opp-label">Trafic / mois à 12 mois</span></div>
+        <div class="opp-stat"><span class="opp-num">5 000</span><span class="opp-label">Trafic / mois à 24 mois</span></div>
+        <div class="opp-stat"><span class="opp-num">15 / 20</span><span class="opp-label">Prompts cités IA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHART -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">📈 Projection trafic</div>
+    <h2>Votre trafic — aujourd'hui et demain.</h2>
+    <p class="lead">Hypothèse réaliste basée sur la difficulté SEO du marché (KD moyen 16%) et notre cadence de production.</p>
+
+    <div class="chart-card">
+      <div class="chart-head">
+        <div class="chart-title">Fer-Tendance — projection 24 mois</div>
+        <div class="chart-legend">
+          <span class="leg-item"><span class="leg-dot leg-now"></span> Tendance actuelle</span>
+          <span class="leg-item"><span class="leg-dot leg-proj"></span> Avec Décupler</span>
+        </div>
+      </div>
+
+      <svg class="chart-svg" viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
+        <!-- grid horizontal -->
+        <g stroke="#e2e8f0" stroke-width="1">
+          <line x1="60" y1="50" x2="860" y2="50"/>
+          <line x1="60" y1="110" x2="860" y2="110"/>
+          <line x1="60" y1="170" x2="860" y2="170"/>
+          <line x1="60" y1="230" x2="860" y2="230"/>
+          <line x1="60" y1="290" x2="860" y2="290"/>
+        </g>
+        <!-- y axis labels -->
+        <g font-family="JetBrains Mono,monospace" font-size="11" fill="#94a3b8" text-anchor="end">
+          <text x="52" y="54">6K</text>
+          <text x="52" y="114">4,5K</text>
+          <text x="52" y="174">3K</text>
+          <text x="52" y="234">1,5K</text>
+          <text x="52" y="294">0</text>
+        </g>
+        <!-- x axis labels -->
+        <g font-family="JetBrains Mono,monospace" font-size="11" fill="#94a3b8" text-anchor="middle">
+          <text x="120" y="312">Aujourd'hui</text>
+          <text x="350" y="312">+6 mois</text>
+          <text x="580" y="312">+12 mois</text>
+          <text x="810" y="312">+24 mois</text>
+        </g>
+
+        <!-- separator today -->
+        <line x1="120" y1="40" x2="120" y2="290" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+
+        <!-- actual point red -->
+        <circle cx="120" cy="262" r="5" fill="#ef4444"/>
+        <text x="120" y="252" font-family="JetBrains Mono,monospace" font-size="11" font-weight="700" fill="#ef4444" text-anchor="middle">698</text>
+
+        <!-- if nothing changes : continued slow decline -->
+        <path d="M 120 262 Q 350 270 580 278 T 810 285" stroke="#ef4444" stroke-width="2" fill="none" stroke-dasharray="4 4" opacity="0.5"/>
+        <text x="810" y="282" font-family="JetBrains Mono,monospace" font-size="10" fill="#ef4444" text-anchor="end" opacity="0.7">~500 sans action</text>
+
+        <!-- projection green :
+             0     -> 698 -> y = 290 - (698/6000)*240 = 290 - 27.9 = 262
+             6m    -> 1200 -> y = 290 - (1200/6000)*240 = 290 - 48 = 242
+             12m   -> 2500 -> y = 290 - (2500/6000)*240 = 290 - 100 = 190
+             24m   -> 5000 -> y = 290 - (5000/6000)*240 = 290 - 200 = 90
+        -->
+        <path d="M 120 262 Q 230 255 350 242 Q 470 220 580 190 Q 690 145 810 90" stroke="#10b981" stroke-width="3.5" fill="none"/>
+        <circle cx="350" cy="242" r="5" fill="#10b981"/>
+        <circle cx="580" cy="190" r="5" fill="#10b981"/>
+        <circle cx="810" cy="90" r="6" fill="#10b981"/>
+        <text x="350" y="234" font-family="JetBrains Mono,monospace" font-size="11" font-weight="700" fill="#059669" text-anchor="middle">1 200</text>
+        <text x="580" y="182" font-family="JetBrains Mono,monospace" font-size="11" font-weight="700" fill="#059669" text-anchor="middle">2 500</text>
+        <text x="810" y="80" font-family="JetBrains Mono,monospace" font-size="12" font-weight="800" fill="#059669" text-anchor="end">5 000</text>
+
+        <!-- aujourd'hui badge -->
+        <rect x="85" y="20" width="70" height="20" rx="10" fill="#fef2f2" stroke="#fecaca"/>
+        <text x="120" y="34" font-family="JetBrains Mono,monospace" font-size="10" font-weight="700" fill="#ef4444" text-anchor="middle">AUJOURD'HUI</text>
+      </svg>
+
+      <div class="chart-footer">
+        <div class="chart-stat cs-now">
+          <span class="cs-num">698</span>
+          <span class="cs-label">Trafic actuel / mois</span>
+        </div>
+        <div class="chart-stat cs-12m">
+          <span class="cs-num">2 500</span>
+          <span class="cs-label">Cible 12 mois (×3,5)</span>
+        </div>
+        <div class="chart-stat cs-24m">
+          <span class="cs-num">5 000</span>
+          <span class="cs-label">Cible 24 mois (×7)</span>
+        </div>
+      </div>
+    </div>
+    <div class="conclusion">→ <strong>Hypothèse :</strong> rattrapage progressif en ciblant en priorité les requêtes <strong>"escalier quart tournant" (14,8K vol, KD 19)</strong>, <strong>"escalier escamotable" (9,9K, KD 25)</strong>, <strong>"rambarde escalier" (8,1K, KD 17)</strong> et le métier cœur <strong>"escalier métallique" (1,3K, KD 15)</strong>. Toutes en KD < 25 = atteignables en 6-12 mois. Le pallier de 5K à 24 mois est en deçà de oeba.fr (37,6K) et woodup.fr (67K) — il y a encore beaucoup de marge ensuite.</div>
+  </div>
+</section>
+
+<!-- BLOC MATHÉMATIQUE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">📊 État des lieux mathématique</div>
+    <h2>Les chiffres ne mentent pas.</h2>
+    <p class="lead">On regarde où vous êtes vs vos concurrents directs et le volume marché. Le gap est précis. Le plan pour le combler aussi.</p>
+
+    <div class="math-block">
+      <h3>Vous vs cible 12 mois</h3>
+      <div class="math-table">
+        <table>
+          <thead>
+            <tr><th>Métrique</th><th>Aujourd'hui</th><th>Cible 12 mois</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="label">Trafic SEO mensuel</span></td><td><span class="you">698</span></td><td><span class="target">2 500 (×3,5)</span></td></tr>
+            <tr><td><span class="label">Mots-clés positionnés</span></td><td><span class="you">309 (-14%)</span></td><td><span class="target">800+ (×2,5)</span></td></tr>
+            <tr><td><span class="label">Mots-clés top 10</span></td><td><span class="you">~30</span></td><td><span class="target">80+</span></td></tr>
+            <tr><td><span class="label">Authority Score</span></td><td><span class="you">16</span></td><td><span class="target">25+</span></td></tr>
+            <tr><td><span class="label">Backlinks acquis sur la période</span></td><td><span class="you">—</span></td><td><span class="target">+120</span></td></tr>
+            <tr><td><span class="label">Mentions ChatGPT / mois</span></td><td><span class="you">3</span></td><td><span class="target">15+</span></td></tr>
+            <tr><td><span class="label">Prompts business cités (top 20)</span></td><td><span class="you">0-1 / 20</span></td><td><span class="target">10 / 20</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="math-block">
+      <h3>Vous vs concurrents (marché escalier)</h3>
+      <div class="math-table">
+        <table>
+          <thead>
+            <tr><th>Site</th><th>Trafic / mois</th><th>Mots-clés Google</th><th>Backlinks</th><th>Mentions IA</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="label">Fer-Tendance (vous)</span></td><td><span class="you">698</span></td><td><span class="you">309</span></td><td><span class="you">827</span></td><td><span class="you">3</span></td></tr>
+            <tr><td><span class="label">oeba.fr</span></td><td><span class="compet">37 600</span></td><td><span class="compet">7 800</span></td><td><span class="compet">9 900</span></td><td><span class="compet">48</span></td></tr>
+            <tr><td><span class="label">woodup.fr</span></td><td><span class="compet">67 000</span></td><td><span class="todo">[à compléter]</span></td><td><span class="todo">[à compléter]</span></td><td><span class="todo">[à compléter]</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="conclusion">→ <strong>Conclusion :</strong> oeba.fr fait <strong>×54 votre trafic</strong>, woodup.fr <strong>×96</strong>. Le gap est massif. <strong>Mais la difficulté moyenne du marché est de 16%</strong> — c'est un secteur où la place est encore disponible pour qui s'organise.</div>
+    </div>
+
+    <div class="math-block">
+      <h3>Le marché disponible — top mots-clés escalier</h3>
+      <p style="font-size:.88rem;color:var(--text-mid);margin-bottom:16px">384 138 mots-clés au total dans la niche. <strong style="color:var(--text)">2 981 920 recherches mensuelles cumulées</strong>. Difficulté moyenne 16%. Voici les pépites accessibles :</p>
+      <div class="kw-grid">
+        <div class="kw-card"><span class="kw-name">escalier quart tournant</span><span class="kw-meta"><span class="kw-vol">14 800</span><span class="kw-kd">KD 19</span></span></div>
+        <div class="kw-card"><span class="kw-name">rampe escalier</span><span class="kw-meta"><span class="kw-vol">12 100</span><span class="kw-kd med">KD 31</span></span></div>
+        <div class="kw-card"><span class="kw-name">escalier escamotable</span><span class="kw-meta"><span class="kw-vol">9 900</span><span class="kw-kd">KD 25</span></span></div>
+        <div class="kw-card"><span class="kw-name">escalier colimaçon</span><span class="kw-meta"><span class="kw-vol">8 100</span><span class="kw-kd">KD 23</span></span></div>
+        <div class="kw-card"><span class="kw-name">escalier bois</span><span class="kw-meta"><span class="kw-vol">8 100</span><span class="kw-kd">KD 24</span></span></div>
+        <div class="kw-card"><span class="kw-name">garde corps escalier</span><span class="kw-meta"><span class="kw-vol">8 100</span><span class="kw-kd med">KD 30</span></span></div>
+        <div class="kw-card"><span class="kw-name">rambarde escalier</span><span class="kw-meta"><span class="kw-vol">8 100</span><span class="kw-kd">KD 17</span></span></div>
+        <div class="kw-card"><span class="kw-name">main courante escalier</span><span class="kw-meta"><span class="kw-vol">6 600</span><span class="kw-kd">KD 24</span></span></div>
+        <div class="kw-card"><span class="kw-name">escalier en bois</span><span class="kw-meta"><span class="kw-vol">5 400</span><span class="kw-kd">KD 19</span></span></div>
+        <div class="kw-card"><span class="kw-name">escalier extérieur</span><span class="kw-meta"><span class="kw-vol">5 400</span><span class="kw-kd">KD 16</span></span></div>
+        <div class="kw-card"><span class="kw-name">escalier métallique</span><span class="kw-meta"><span class="kw-vol">1 300</span><span class="kw-kd">KD 15</span></span></div>
+      </div>
+      <div class="conclusion">→ <strong>87 900 recherches/mois cumulées</strong> sur ces 11 mots-clés stratégiques. CTR moyen 10% en position 3-5 = potentiel ~8 800 visites/mois. Majorité en KD < 25 = très atteignable.</div>
+    </div>
+
+    <!-- CAPTURE SEMRUSH MOTS-CLÉS -->
+    <div class="screen-card" style="margin-top:20px">
+      <img src="./screenshots/semrush-keywords-escalier.png" alt="SEMrush mots-clés escalier" onerror="this.parentElement.style.background='var(--bg-amber-soft)';this.parentElement.innerHTML='<div style=\'padding:60px 20px;text-align:center;color:var(--amber);font-family:var(--M);font-size:.85rem\'>📸 Capture SEMrush — top mots-clés escalier<br><span style=\'font-size:.7rem;opacity:.7\'>(à ajouter dans ./screenshots/)</span></div>'"/>
+      <div class="screen-caption"><strong>Données SEMrush</strong> · 384K mots-clés, 2,98M vol mensuel, KD moyen 16%</div>
+    </div>
+  </div>
+</section>
+
+<!-- IA PROMPT -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">🤖 La preuve par l'IA</div>
+    <h2>Ce que ChatGPT dit quand un prospect demande.</h2>
+    <p class="lead">75% des décisions B2B passent désormais par une étape "interrogation LLM" avant l'achat. Voici ce qui se passe aujourd'hui — et pourquoi c'est urgent.</p>
+
+    <div class="ia-mockup">
+      <div class="ia-head">
+        <span class="ia-dot r"></span><span class="ia-dot y"></span><span class="ia-dot g"></span>
+        <span style="margin-left:10px">ChatGPT · GPT-4 · réponse du 11/05/2026</span>
+      </div>
+      <div class="ia-body">
+        <div class="ia-prompt">Quels sont les meilleurs fabricants français d'escaliers métalliques sur-mesure ?</div>
+        <div class="ia-response">
+          <p>Voici quelques fabricants français reconnus pour leurs escaliers métalliques sur-mesure :</p>
+          <p>1. <span class="ia-cite">Oeba</span> — spécialiste de l'escalier sur-mesure, très bien implanté sur la métallerie d'art et le contemporain.<br>
+          2. <span class="ia-cite">Escamesure</span> — fabricant historique d'escaliers métalliques en kit et sur-mesure.<br>
+          3. <span class="ia-cite">Woodup</span> — gamme étendue d'escaliers design et sur-mesure.<br>
+          4. <span class="ia-cite">Ascenso</span> — solutions modulaires et escaliers design.</p>
+          <p>Ces fabricants sont régulièrement cités dans les avis professionnels et présentent des références solides.</p>
+        </div>
+        <div class="ia-verdict">
+          <strong>⚠️ Verdict :</strong> Fer-Tendance <span class="ia-missing">non mentionné</span>. ChatGPT cite vos concurrents directs — pas vous. Même logique sur Perplexity et Gemini. <strong>Chaque prompt manqué = un prospect perdu.</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NATHAN -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">👋 Qui pilote</div>
+    <h2>Vous bossez avec qui exactement.</h2>
+    <p class="lead">Pas une agence anonyme. Un opérateur qui fait du SEO depuis 14 ans et qui a documenté ses réussites publiquement.</p>
+
+    <div class="nathan-block">
+      <!-- Photo Nathan : URL publique (LinkedIn, decupler.com, ou repo public) -->
+      <div class="nathan-photo">
+        <img src="../assets/nathan.jpg" alt="Nathan Fenina" onerror="this.style.display='none';this.parentElement.innerHTML='NF'"/>
+      </div>
+      <div class="nathan-info">
+        <h3>Nathan Fenina</h3>
+        <span class="nathan-role">Founder Decupler · 14 ans SEO</span>
+        <p class="nathan-desc">Je fais du SEO depuis 2012 et du GEO (Generative Engine Optimization — la visibilité dans ChatGPT/Perplexity/Claude/Gemini) depuis 2023. <strong>J'ai accompagné Decathlon, Société Générale, Le Point, Sodexo et Pluxee</strong>. Aujourd'hui je pilote Décupler — agence SEO/GEO + outil propriétaire d'automatisation. Je ne sous-traite pas en off-shore : c'est moi qui définis la stratégie de chaque compte.</p>
+        <div class="nathan-proofs">
+          <div class="np-card">
+            <span class="np-num">×12</span>
+            <span class="np-label">Trafic SEO record</span>
+            <span class="np-sub">Cas scale-up cloud B2B en 12 mois</span>
+          </div>
+          <div class="np-card">
+            <!-- TODO Nathan : remplacer par chiffre exact abonnés newsletter -->
+            <span class="np-num">2K+</span>
+            <span class="np-label">Newsletter Décupler</span>
+            <span class="np-sub">Décideurs marketing & founders B2B</span>
+          </div>
+          <div class="np-card">
+            <!-- TODO Nathan : remplacer par chiffre exact followers LinkedIn -->
+            <span class="np-num">10K+</span>
+            <span class="np-label">Followers LinkedIn</span>
+            <span class="np-sub">Audience qualifiée SEO/GEO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIONS / CHARGE MENSUELLE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">🛠️ Le plan d'action</div>
+    <h2>Ce qu'on produit chaque mois.</h2>
+    <p class="lead">Pas de boîte noire. Charge mensuelle structurée, identique chaque mois, multipliée par 12 (ou 24).</p>
+
+    <div class="math-block">
+      <div class="math-table">
+        <table>
+          <thead>
+            <tr><th>Levier</th><th>Cadence mensuelle</th><th>12 mois</th><th>24 mois</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="label">Contenus publiés (articles + pages)</span></td><td><span class="target">12 / mois minimum</span></td><td><span class="target">144</span></td><td><span class="target">288</span></td></tr>
+            <tr><td><span class="label">Actions techniques on-page</span></td><td><span class="target">En continu</span></td><td><span class="target">Tout le site optimisé</span></td><td><span class="target">+ refonte profonde</span></td></tr>
+            <tr><td><span class="label">Performance & rapidité (Core Web Vitals)</span></td><td><span class="target">En continu</span></td><td><span class="target">Score > 90</span></td><td><span class="target">Maintenu</span></td></tr>
+            <tr><td><span class="label">Backlinks (annuaires gratuits, forums, presse soft)</span></td><td><span class="target">10 / mois</span></td><td><span class="target">120</span></td><td><span class="target">240</span></td></tr>
+            <tr><td><span class="label">GEO — prompts ChatGPT / Perplexity / Gemini travaillés</span></td><td><span class="target">15 prompts cibles</span></td><td><span class="target">15 prompts gagnés</span></td><td><span class="target">25 prompts</span></td></tr>
+            <tr><td><span class="label">Réunions stratégiques + reporting chiffré</span></td><td><span class="target">1 / mois</span></td><td><span class="target">12 réunions</span></td><td><span class="target">24 réunions</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="conclusion">→ <strong>Charge mensuelle constante</strong>, prédictible. Pour faire ça en interne il faudrait <strong>1 ETP SEO (50K€/an chargé) + un rédacteur freelance (~20K€/an)</strong> minimum = 70K€/an. Sans compter le pilotage. La délégation Décupler est rentable dès le mois 3.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">🗺️ Roadmap 12 mois</div>
+    <h2>Le déroulé trimestre par trimestre.</h2>
+    <p class="lead">Chaque trimestre = un focus, des livrables, un palier à atteindre.</p>
+
+    <div class="roadmap">
+      <div class="rm-card rm-1">
+        <span class="rm-period">T1 · Mois 1-3</span>
+        <h3 class="rm-title">Fondations</h3>
+        <div class="rm-list">
+          <div class="rm-item">Audit SEO + GEO complet</div>
+          <div class="rm-item">Refonte des pages-clés</div>
+          <div class="rm-item">Setup monitoring 4 LLMs</div>
+          <div class="rm-item">36 contenus produits</div>
+          <div class="rm-item">30 backlinks</div>
+          <div class="rm-item"><strong>Cible : 850 visites/mois</strong></div>
+        </div>
+      </div>
+      <div class="rm-card rm-2">
+        <span class="rm-period">T2 · Mois 4-6</span>
+        <h3 class="rm-title">Accélération</h3>
+        <div class="rm-list">
+          <div class="rm-item">36 contenus supplémentaires</div>
+          <div class="rm-item">30 backlinks (DR croissants)</div>
+          <div class="rm-item">Premières citations IA gagnées</div>
+          <div class="rm-item">Optimisation conversion</div>
+          <div class="rm-item"><strong>Cible : 1 200 visites/mois</strong></div>
+        </div>
+      </div>
+      <div class="rm-card rm-3">
+        <span class="rm-period">T3 · Mois 7-9</span>
+        <h3 class="rm-title">Autorité</h3>
+        <div class="rm-list">
+          <div class="rm-item">36 contenus + intégration médias</div>
+          <div class="rm-item">30 backlinks + presse soft</div>
+          <div class="rm-item">Top 3 sur 5 mots-clés clés</div>
+          <div class="rm-item">10 prompts ChatGPT gagnés</div>
+          <div class="rm-item"><strong>Cible : 1 800 visites/mois</strong></div>
+        </div>
+      </div>
+      <div class="rm-card rm-4">
+        <span class="rm-period">T4 · Mois 10-12</span>
+        <h3 class="rm-title">Capitalisation</h3>
+        <div class="rm-list">
+          <div class="rm-item">36 contenus + optimisation conversion</div>
+          <div class="rm-item">Bilan + plan année 2</div>
+          <div class="rm-item">15 prompts IA cités</div>
+          <div class="rm-item">Pipeline leads inbound stable</div>
+          <div class="rm-item"><strong>Cible : 2 500 visites/mois</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">🏆 Les preuves terrain</div>
+    <h2>Ce que la méthode produit en conditions réelles.</h2>
+    <p class="lead">Cas réels d'accompagnements long terme. Chiffres mesurés.</p>
+
+    <div class="cases">
+      <!-- TODO Nathan : remplacer ces 3 use cases par 1-3 vrais cas Decupler avec durées 12-24 mois -->
+      <div class="case-card">
+        <div class="case-icon">🏗️</div>
+        <div class="case-client">[Cas client 1 — à compléter]</div>
+        <span class="case-sector">Secteur · taille</span>
+        <p class="case-result">Résultats chiffrés à compléter par Nathan : <strong>trafic ×N</strong>, mots-clés gagnés, mentions IA, leads inbound.</p>
+        <div class="case-meta">[12-24 mois d'accompagnement]</div>
+      </div>
+      <div class="case-card">
+        <div class="case-icon">🔨</div>
+        <div class="case-client">[Cas client 2 — à compléter]</div>
+        <span class="case-sector">Secteur · taille</span>
+        <p class="case-result">Résultats chiffrés à compléter : <strong>×N trafic</strong>, positionnements clés, citations LLMs.</p>
+        <div class="case-meta">[Durée]</div>
+      </div>
+      <div class="case-card">
+        <div class="case-icon">🏢</div>
+        <div class="case-client">[Cas client 3 — à compléter]</div>
+        <span class="case-sector">Secteur · taille</span>
+        <p class="case-result">Résultats : <strong>visibilité IA</strong>, prompts cités, premiers clients via Perplexity.</p>
+        <div class="case-meta">[Durée]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACK SINGLE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">💼 Pack proposé</div>
+    <h2>Un pack, taillé pour vous.</h2>
+    <p class="lead">Pas un menu compliqué. Le pack Croissance — calibré pour rattraper le marché de l'escalier en 12 mois.</p>
+
+    <div class="pack-single-wrap">
+      <div class="pack-single">
+        <span class="pack-badge">⭐ Recommandé pour Fer-Tendance</span>
+        <h3 class="pack-name">Pack Croissance</h3>
+        <span class="pack-for">Rattraper le marché en 12 mois</span>
+        <div class="pack-price">1 500€</div>
+        <span class="pack-price-unit">/mois HT · engagement 12 mois</span>
+        <div class="pack-features">
+          <div class="pack-feature"><strong>12 contenus/mois</strong> publiés (articles SEO + pages catégorie/produit, optimisés GEO)</div>
+          <div class="pack-feature"><strong>Actions techniques on-page</strong> en continu (schema, maillage interne, optimisations CTR)</div>
+          <div class="pack-feature"><strong>Performance & rapidité</strong> du site en continu (Core Web Vitals, mobile)</div>
+          <div class="pack-feature"><strong>10 backlinks/mois</strong> (annuaires gratuits qualifiés, forums, citations presse soft)</div>
+          <div class="pack-feature"><strong>15 prompts GEO</strong> travaillés sur ChatGPT / Perplexity / Gemini / Claude</div>
+          <div class="pack-feature"><strong>Monitoring AEO permanent</strong> (suivi citations IA, 4 LLMs)</div>
+          <div class="pack-feature"><strong>1 réunion stratégique/mois</strong> + reporting chiffré mensuel</div>
+          <div class="pack-feature">Accès à l'app Décupler (suivi en temps réel)</div>
+        </div>
+        <div class="pack-options">
+          <span class="pack-options-label">Options sur demande</span>
+          <strong>LinkedIn ghostwriting</strong>, <strong>articles presse</strong>, <strong>vidéos UGC IA</strong>, <strong>refonte design</strong>, accompagnement multi-langues. Activables à tout moment en cours de contrat.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">🛡️ Garantie</div>
+    <h2>Vous décidez en confiance.</h2>
+    <p class="lead">Engagement 12 mois — avec une vraie porte de sortie au mois 1, sans condition.</p>
+
+    <div class="guard-grid">
+      <div class="guard-card">
+        <span class="guard-icon">🚪</span>
+        <h3 class="guard-title">Garantie 30 jours — sans condition</h3>
+        <p class="guard-desc">Si à la fin du <strong>1er mois</strong> la collaboration ne vous convient pas — méthode, organisation, feeling — <strong>on s'arrête là</strong>. Pas de pénalité, pas de pression. Vous récupérez vos accès et les livrables produits. On avance que si on est alignés.</p>
+      </div>
+      <div class="guard-card">
+        <span class="guard-icon">📊</span>
+        <h3 class="guard-title">Transparence chiffrée mensuelle</h3>
+        <p class="guard-desc">Vous recevez un <strong>reporting mensuel chiffré</strong> : trafic, mots-clés gagnés/perdus, citations IA, backlinks acquis. Tout est mesuré. Si la trajectoire ne tient pas, on ajuste — c'est notre responsabilité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">✅ Pour avancer</div>
+    <h2>Trois façons de bouger.</h2>
+    <p class="lead">Choisissez celle qui vous va.</p>
+
+    <div class="ctas">
+      <div class="cta-card">
+        <span class="cta-icon">⚡</span>
+        <h3 class="cta-title">Signer maintenant</h3>
+        <p class="cta-desc">On lance le contrat. Onboarding 1-to-1 dans la semaine.</p>
+        <a class="cta-btn green" href="mailto:projects@decupler.com?subject=Fer-Tendance%20-%20Signature%20pack%20Croissance">Je signe →</a>
+      </div>
+      <div class="cta-card">
+        <span class="cta-icon">📅</span>
+        <h3 class="cta-title">30 min pour valider</h3>
+        <p class="cta-desc">On regarde ensemble vos points d'incertitude. Pas de pitch — juste vos questions.</p>
+        <a class="cta-btn violet" href="https://calendly.com/fenina-nathan/consultationstrategique" target="_blank">Réserver →</a>
+      </div>
+      <div class="cta-card">
+        <span class="cta-icon">✉️</span>
+        <h3 class="cta-title">Question rapide</h3>
+        <p class="cta-desc">Vous voulez clarifier un point précis ? Réponse sous 24h ouvrées.</p>
+        <a class="cta-btn amber" href="mailto:projects@decupler.com?subject=Fer-Tendance%20-%20Question%20propal">Envoyer →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <p><strong>Nathan Fenina</strong> · Founder, Décupler</p>
+    <p>projects@decupler.com · <a href="https://decupler.com" target="_blank">decupler.com</a></p>
+    <p class="small">Proposition confidentielle pour Fer-Tendance · 11 mai 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
