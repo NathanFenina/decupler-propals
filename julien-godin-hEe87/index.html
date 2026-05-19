@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Proposition Décupler × Julien Godin — Site + moteur programmatique perte de poids</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fafbfc;
+  --bg-card:#ffffff;
+  --bg-soft:#f1f5f9;
+  --bg-violet-soft:#f5f3ff;
+  --bg-green-soft:#ecfdf5;
+  --bg-red-soft:#fef2f2;
+  --bg-amber-soft:#fffbeb;
+  --bg-blue-soft:#eff6ff;
+  --text:#0f172a;
+  --text-mid:#475569;
+  --text-soft:#64748b;
+  --text-mute:#94a3b8;
+  --border:#e2e8f0;
+  --border-strong:#cbd5e1;
+  --violet:#7B5CFA;
+  --violet-2:#667eea;
+  --violet-light:#a78bfa;
+  --green:#10b981;
+  --green-2:#059669;
+  --red:#ef4444;
+  --amber:#f59e0b;
+  --blue:#3b82f6;
+  --F:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --M:'JetBrains Mono',monospace;
+  --shadow-sm:0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 16px rgba(15,23,42,.06);
+  --shadow-md:0 8px 24px rgba(15,23,42,.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--F);background:var(--bg);color:var(--text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{color:var(--text);line-height:1.15;font-weight:800;letter-spacing:-.02em}
+p{color:var(--text-mid)}
+a{color:var(--violet);text-decoration:none}
+ul{list-style:none}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.nav-logo{font-size:15px;font-weight:800}
+.nav-logo .dot{color:var(--violet)}
+.nav-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--M);font-size:11px;font-weight:600;color:var(--green-2);background:var(--bg-green-soft);border:1px solid #a7f3d0;padding:5px 12px;border-radius:20px}
+.nav-tag .dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.nav-cta{padding:9px 18px;background:var(--violet);color:#fff;font-size:13px;font-weight:700;border-radius:8px;transition:background .2s}
+.nav-cta:hover{background:var(--violet-2);color:#fff}
+
+/* HERO */
+.hero{padding:48px 0 40px}
+.hero-title-mega{font-family:var(--M);font-size:13px;font-weight:700;color:var(--violet);letter-spacing:.3em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:14px}
+.hero-title-mega::before, .hero-title-mega::after{content:'';flex:0 0 36px;height:2px;background:var(--violet);opacity:.4}
+.hero-title-mega::after{flex:1}
+.hero-headline-box{padding:40px 0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--bg-violet-soft);border:1px solid #ddd6fe;color:var(--violet);font-family:var(--M);font-size:11px;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.06em;text-transform:uppercase}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:900;margin-bottom:18px;line-height:1.1}
+.hl-v{color:var(--violet)}
+.hl-g{color:var(--green)}
+.hero-sub{font-size:1.05rem;max-width:720px;margin-bottom:32px;line-height:1.65}
+.hero-sub strong{color:var(--text)}
+
+/* INTRO BIO */
+.intro-bar{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:0}
+.intro-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-sm)}
+.intro-avatar{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0;overflow:hidden;background-size:cover;background-position:center}
+.av-client{background:linear-gradient(135deg,#64748b,#334155)}
+.av-nathan{background:linear-gradient(135deg,#7B5CFA,#5b21b6)}
+.av-nathan img{width:100%;height:100%;object-fit:cover}
+.intro-label{font-family:var(--M);font-size:10px;font-weight:600;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:2px}
+.intro-name{font-size:14px;font-weight:700;color:var(--text)}
+.intro-bio{font-size:12px;color:var(--text-soft);margin-top:1px;line-height:1.4}
+
+/* SECTION */
+.section{padding:64px 0;border-top:1px solid var(--border)}
+.section-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--M);font-size:10px;font-weight:600;color:var(--violet);background:var(--bg-violet-soft);padding:5px 12px;border-radius:20px;margin-bottom:14px;letter-spacing:.08em;text-transform:uppercase}
+.section h2{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
+.section .lead{font-size:1rem;color:var(--text-mid);max-width:720px;margin-bottom:32px;line-height:1.65}
+
+/* TRUST BAR (logos) */
+.trust-bar{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px 26px;box-shadow:var(--shadow-sm);text-align:center}
+.trust-label{font-family:var(--M);font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;font-weight:600}
+.trust-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:24px 36px}
+.trust-logo{font-size:.92rem;color:var(--text);font-weight:700;letter-spacing:-.01em;opacity:.7}
+
+/* TRIPTYCH */
+.triptych{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:stretch}
+.tri-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.tri-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.tri-prob::before{background:linear-gradient(90deg,var(--red),var(--amber))}
+.tri-sol::before{background:linear-gradient(90deg,var(--violet),var(--violet-light))}
+.tri-dream::before{background:linear-gradient(90deg,var(--green),var(--green-2))}
+.tri-icon{font-size:1.6rem;margin-bottom:12px;display:block}
+.tri-title{font-size:1rem;font-weight:800;margin-bottom:10px}
+.tri-prob .tri-title{color:var(--red)}
+.tri-sol .tri-title{color:var(--violet)}
+.tri-dream .tri-title{color:var(--green-2)}
+.tri-text{font-size:.88rem;color:var(--text-mid);line-height:1.6;flex:1}
+.tri-text strong{color:var(--text);font-weight:700}
+
+/* SPRINTS */
+.sprints{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px}
+.sprint-card{background:var(--bg-card);border:1px solid var(--border);border-radius:18px;padding:28px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.sprint-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.sprint-1::before{background:linear-gradient(90deg,var(--blue),var(--violet-light))}
+.sprint-2::before{background:linear-gradient(90deg,var(--violet),var(--violet-2))}
+.sprint-label{font-family:var(--M);font-size:11px;font-weight:700;color:var(--violet);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;display:block}
+.sprint-title{font-size:1.2rem;font-weight:900;margin-bottom:6px}
+.sprint-period{font-family:var(--M);font-size:12px;color:var(--text-mute);margin-bottom:18px;display:block;font-weight:600}
+.sprint-desc{font-size:.92rem;color:var(--text-mid);line-height:1.65;margin-bottom:18px}
+.sprint-desc strong{color:var(--text)}
+.sprint-list{display:flex;flex-direction:column;gap:8px}
+.sprint-item{font-size:.86rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:8px;line-height:1.55}
+.sprint-item::before{content:'→';color:var(--violet);font-weight:800;flex-shrink:0;font-family:var(--M)}
+.sprint-item strong{color:var(--text);font-weight:700}
+
+/* BRAIN ARCHITECTURE */
+.brain-block{background:var(--bg-card);border:1px solid var(--border);border-radius:18px;padding:32px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.brain-block::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--violet),var(--green))}
+.brain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:22px}
+.brain-card{padding:18px;border:1px solid var(--border);border-radius:12px;background:var(--bg-soft)}
+.brain-card-label{font-family:var(--M);font-size:10px;font-weight:700;color:var(--violet);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;display:block}
+.brain-card-title{font-size:.95rem;font-weight:800;margin-bottom:8px}
+.brain-card-text{font-size:.82rem;color:var(--text-mid);line-height:1.55}
+.brain-card-text code{font-family:var(--M);font-size:.78rem;background:var(--bg-card);padding:1px 6px;border-radius:4px;color:var(--violet);border:1px solid var(--border)}
+
+/* TERMINAL MOCKUP */
+.terminal{background:#0f172a;border-radius:12px;padding:0;overflow:hidden;box-shadow:var(--shadow-md);margin-top:8px}
+.term-head{background:#1e293b;padding:10px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #334155}
+.term-dot{width:10px;height:10px;border-radius:50%}
+.term-dot.r{background:#ef4444}.term-dot.y{background:#f59e0b}.term-dot.g{background:#10b981}
+.term-title{font-family:var(--M);font-size:11px;color:#94a3b8;margin-left:10px;font-weight:600}
+.term-body{padding:18px 20px;font-family:var(--M);font-size:.82rem;line-height:1.7;color:#e2e8f0}
+.term-prompt{color:#7B5CFA;font-weight:700}
+.term-user{color:#e2e8f0}
+.term-out{color:#94a3b8}
+.term-success{color:#10b981}
+.term-line{margin-bottom:4px;display:block}
+
+/* SITES GALLERY */
+.sites-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.site-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s,border-color .25s;display:block}
+.site-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--violet-light)}
+.site-host{font-family:var(--M);font-size:.78rem;color:var(--violet);font-weight:700;margin-bottom:6px;display:block;letter-spacing:.02em}
+.site-name{font-size:1rem;font-weight:800;margin-bottom:6px;color:var(--text)}
+.site-desc{font-size:.82rem;color:var(--text-mid);line-height:1.55}
+.site-tag{display:inline-block;font-family:var(--M);font-size:9px;font-weight:700;background:var(--bg-amber-soft);color:var(--amber);padding:2px 8px;border-radius:4px;margin-top:8px;letter-spacing:.06em;text-transform:uppercase;border:1px solid #fde68a}
+.site-tag.live{background:var(--bg-green-soft);color:var(--green-2);border-color:#a7f3d0}
+
+/* NATHAN */
+.nathan-block{display:grid;grid-template-columns:220px 1fr;gap:28px;background:var(--bg-card);border:1px solid var(--border);border-radius:18px;padding:32px;box-shadow:var(--shadow-sm);align-items:center}
+.nathan-photo{aspect-ratio:1;border-radius:16px;background:linear-gradient(135deg,#7B5CFA,#5b21b6);display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:900;color:#fff;letter-spacing:-.04em;box-shadow:var(--shadow-md);overflow:hidden;position:relative}
+.nathan-photo img{width:100%;height:100%;object-fit:cover}
+.nathan-info h3{font-size:1.4rem;font-weight:900;margin-bottom:6px}
+.nathan-role{font-family:var(--M);font-size:12px;color:var(--violet);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;display:block}
+.nathan-desc{font-size:.95rem;color:var(--text-mid);line-height:1.65}
+.nathan-desc strong{color:var(--text)}
+
+/* ROADMAP */
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}
+.rm-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:var(--shadow-sm);position:relative}
+.rm-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.rm-1::before{background:var(--blue)}
+.rm-2::before{background:var(--violet)}
+.rm-3::before{background:var(--amber)}
+.rm-4::before{background:var(--green)}
+.rm-period{font-family:var(--M);font-size:11px;font-weight:700;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;display:block}
+.rm-title{font-size:.95rem;font-weight:800;margin-bottom:10px}
+.rm-list{display:flex;flex-direction:column;gap:6px}
+.rm-item{font-size:.78rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:6px;line-height:1.5}
+.rm-item::before{content:'→';color:var(--violet);font-weight:800;flex-shrink:0}
+
+/* PACK */
+.pack-single-wrap{max-width:620px;margin:0 auto}
+.pack-single{background:var(--bg-card);border:2px solid var(--violet);border-radius:20px;padding:36px;box-shadow:0 12px 40px rgba(123,92,250,.18);position:relative;overflow:hidden}
+.pack-single::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--violet),var(--violet-light))}
+.pack-badge{position:absolute;top:14px;right:14px;font-family:var(--M);font-size:9px;font-weight:700;background:var(--violet);color:#fff;padding:4px 12px;border-radius:4px;letter-spacing:.08em;text-transform:uppercase}
+.pack-name{font-size:1.4rem;font-weight:900;margin-bottom:4px}
+.pack-for{font-family:var(--M);font-size:11px;color:var(--text-mute);margin-bottom:18px;letter-spacing:.04em;text-transform:uppercase;font-weight:600}
+.pack-price{font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:4px;color:var(--violet)}
+.pack-price-unit{font-family:var(--M);font-size:12px;color:var(--text-soft);margin-bottom:22px;display:block}
+.pack-features{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.pack-feature{font-size:.92rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:10px;line-height:1.55}
+.pack-feature::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0;margin-top:1px;font-size:1rem}
+.pack-feature strong{color:var(--text);font-weight:700}
+.pack-payment{margin-top:14px;padding:14px 18px;background:var(--bg-violet-soft);border:1px solid #ddd6fe;border-radius:10px;font-size:.86rem;color:var(--text-mid);line-height:1.6}
+.pack-payment strong{color:var(--violet);font-weight:700}
+
+/* GUARANTEE */
+.guard-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.guard-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:var(--shadow-sm)}
+.guard-icon{font-size:1.5rem;margin-bottom:10px;display:block}
+.guard-title{font-size:.98rem;font-weight:800;margin-bottom:6px}
+.guard-desc{font-size:.86rem;color:var(--text-mid);line-height:1.6}
+.guard-desc strong{color:var(--text)}
+
+/* CTA */
+.cta-final{background:linear-gradient(135deg,var(--bg-violet-soft),var(--bg-green-soft));border:1px solid #ddd6fe;border-radius:20px;padding:40px;text-align:center;box-shadow:var(--shadow-sm)}
+.cta-final h3{font-size:1.4rem;font-weight:900;margin-bottom:10px}
+.cta-final p{font-size:.95rem;color:var(--text-mid);max-width:560px;margin:0 auto 24px;line-height:1.6}
+.cta-btn{display:inline-block;padding:14px 28px;background:var(--violet);color:#fff;font-family:var(--M);font-size:13px;font-weight:700;border-radius:10px;letter-spacing:.04em;text-transform:uppercase;transition:opacity .2s,transform .15s;box-shadow:0 4px 16px rgba(123,92,250,.25)}
+.cta-btn:hover{opacity:.92;transform:translateY(-1px);color:#fff}
+
+/* FOOTER */
+footer{padding:40px 0 32px;text-align:center;border-top:1px solid var(--border);margin-top:40px}
+footer p{font-size:.84rem;color:var(--text-soft);margin-bottom:4px}
+footer p strong{color:var(--text);font-weight:700}
+footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-top:14px}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+  .hero{padding:36px 0 32px}
+  .section{padding:48px 0}
+  .intro-bar{grid-template-columns:1fr}
+  .triptych, .sprints, .brain-grid{grid-template-columns:1fr}
+  .guard-grid, .nathan-block{grid-template-columns:1fr}
+  .roadmap{grid-template-columns:1fr 1fr}
+  .nav-inner{justify-content:center}
+  .pack-single, .cta-final{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap nav-inner">
+    <div class="nav-logo">Décupler<span class="dot"> ×</span> Julien Godin</div>
+    <span class="nav-tag"><span class="dot"></span> Proposition · 19 mai 2026</span>
+    <a href="mailto:nathan@decupler.com?subject=Signature%20-%20Site%20%2B%20moteur%20programmatique%20-%207500%20EUR" class="nav-cta">Signer →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+
+    <div class="hero-title-mega">Proposition commerciale</div>
+
+    <div class="hero-headline-box">
+      <div class="eyebrow">📋 19 mai 2026 · pour Julien Godin</div>
+      <h1>Un site vitrine <span class="hl-v">+ un cerveau Claude Code</span><br>qui pond tes pages <span class="hl-g">"perte de poids × ville"</span> à la demande.</h1>
+      <p class="hero-sub">Pas un site WordPress qui prend la poussière. Pas un dev front classique. <strong>Une machine clé en main</strong> : un site vitrine 5 pages + un moteur autonome qui génère, optimise et publie des pages SEO locales — via un terminal, sans toi devant l'écran. <strong>2 sprints en juin · 2 révisions en juillet · 7 500€ HT.</strong></p>
+    </div>
+
+    <!-- INTRO BIO BAR -->
+    <div class="intro-bar">
+      <div class="intro-card">
+        <div class="intro-avatar av-client">JG</div>
+        <div>
+          <span class="intro-label">Préparé pour</span>
+          <div class="intro-name">Julien Godin</div>
+          <div class="intro-bio">Réseau de coachs perte de poids — modèle lead gen local</div>
+        </div>
+      </div>
+      <div class="intro-card">
+        <div class="intro-avatar av-nathan">
+          <img src="../assets/nathan.png" alt="Nathan Fenina" onerror="this.style.display='none';this.parentElement.innerHTML='NF'"/>
+        </div>
+        <div>
+          <span class="intro-label">Par</span>
+          <div class="intro-name">Nathan Fenina · Founder Décupler</div>
+          <div class="intro-bio">14 ans SEO · Le Point, Decathlon, Pluxee · 5+ sites créés</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="section" style="padding-top:40px;padding-bottom:40px">
+  <div class="wrap">
+    <div class="trust-bar">
+      <div class="trust-label">Ils m'ont fait confiance — accompagnement SEO & sites livrés</div>
+      <div class="trust-logos">
+        <span class="trust-logo">LE POINT</span>
+        <span class="trust-logo">DECATHLON</span>
+        <span class="trust-logo">PLUXEE</span>
+        <span class="trust-logo">KAZIDOMI</span>
+        <span class="trust-logo">AUXO INGÉNIERIE</span>
+        <span class="trust-logo">ALLMYSMS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIPTYCH -->
+<section class="section" style="padding-top:24px">
+  <div class="wrap">
+    <div class="section-tag">⚡ En une vue</div>
+    <h2>Le problème, la solution, la situation rêvée.</h2>
+
+    <div class="triptych">
+      <div class="tri-card tri-prob">
+        <span class="tri-icon">📉</span>
+        <h3 class="tri-title">Le problème</h3>
+        <p class="tri-text">Tu sais que <strong>"perte de poids + ville"</strong> est la requête qui convertit le mieux dans ton marché. Mais produire une page unique par ville à la main = <strong>des mois de rédaction</strong>. Et une solution full IA classique te livre 280 pages clones que Google sandbox aussitôt.</p>
+      </div>
+      <div class="tri-card tri-sol">
+        <span class="tri-icon">🛠️</span>
+        <h3 class="tri-title">La solution</h3>
+        <p class="tri-text">Un site vitrine 5 pages sur tes maquettes + <strong>un moteur Claude Code</strong> qui ingère ta data, rédige le contenu, génère 2 images uniques par page et publie. <strong>Tu lui parles depuis un terminal</strong> : "crée 10 pages cette semaine pour les villes &lt;50K habitants". Il s'exécute.</p>
+      </div>
+      <div class="tri-card tri-dream">
+        <span class="tri-icon">🚀</span>
+        <h3 class="tri-title">La situation rêvée</h3>
+        <p class="tri-text">Fin juillet, tu as <strong>un actif qui travaille pour toi</strong> : un site vitrine + un moteur capable de pondre des pages locales à la chaîne, contenu unique, images distinctes, maillage interne propre. Et demain : extension multilingue (Belgique, Suisse) sans changer d'archi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPRINTS -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">🗓️ Le scope</div>
+    <h2>2 sprints en juin · 2 révisions en juillet.</h2>
+    <p class="lead">Découpage clair, validations à chaque étape. Tout est cadré, rien n'est ouvert.</p>
+
+    <div class="sprints">
+      <div class="sprint-card sprint-1">
+        <span class="sprint-label">Sprint 1 — fondations</span>
+        <h3 class="sprint-title">Site vitrine 5 pages</h3>
+        <span class="sprint-period">2 premières semaines de juin</span>
+        <p class="sprint-desc">On reprend <strong>tes maquettes / mockups existants</strong> et on livre un site vitrine clean, rapide, optimisé SEO dès la base. Stack : Claude Code + Netlify.</p>
+        <div class="sprint-list">
+          <div class="sprint-item"><span><strong>5 pages</strong> selon ton arborescence (accueil, méthode, à propos, contact, FAQ ou équivalent)</span></div>
+          <div class="sprint-item"><span><strong>Design fidèle</strong> à tes maquettes — pas de divergence créative</span></div>
+          <div class="sprint-item"><span><strong>SEO on-page propre</strong> : balises, schema.org, sitemap, robots</span></div>
+          <div class="sprint-item"><span><strong>Performance native</strong> : Core Web Vitals optimisés</span></div>
+          <div class="sprint-item"><span><strong>Formulaire contact</strong> + tracking analytics</span></div>
+        </div>
+      </div>
+
+      <div class="sprint-card sprint-2">
+        <span class="sprint-label">Sprint 2 — le cerveau</span>
+        <h3 class="sprint-title">Moteur programmatique + agent</h3>
+        <span class="sprint-period">2 dernières semaines de juin</span>
+        <p class="sprint-desc">On greffe sur le site le <strong>moteur de génération de pages "perte de poids × ville"</strong>. Le cœur du projet. C'est là que ton site devient une machine.</p>
+        <div class="sprint-list">
+          <div class="sprint-item"><span><strong>Template programmatique</strong> par ville (URL, H1, contenu, 2 images uniques, maillage interne)</span></div>
+          <div class="sprint-item"><span><strong>Pipeline API multi-couches</strong> : Claude (rédaction) + OpenAI ou Gemini (images) + Data For SEO (validation volumes)</span></div>
+          <div class="sprint-item"><span><strong>Agent Claude Code</strong> piloté par terminal — tu lui parles, il publie</span></div>
+          <div class="sprint-item"><span><strong>Mémoires structurées</strong> : mémoire business + mémoire pages + skills de rédaction</span></div>
+          <div class="sprint-item"><span><strong>Garde-fous SEO</strong> : pas de duplicate, balises uniques, maillage automatique</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brain-block" style="margin-top:8px">
+      <p style="font-size:.92rem;color:var(--text-mid);line-height:1.65;margin-bottom:0"><strong style="color:var(--text);font-weight:700">Juillet — 2 révisions :</strong> deux allers-retours d'ajustement intégrés au forfait. On corrige le contenu, on affine les prompts, on adapte l'agent à ta façon de l'utiliser. <strong style="color:var(--text);font-weight:700">À la fin de juillet, tu pilotes ton outil en autonomie complète.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- BRAIN ARCHITECTURE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">🧠 Le cerveau Claude Code</div>
+    <h2>Ce que tu pilotes après livraison.</h2>
+    <p class="lead">4 briques internes : skills réutilisables, mémoires persistantes, APIs externes, terminal de pilotage. Tu n'as pas besoin d'être dev — tu parles en français.</p>
+
+    <div class="brain-block">
+      <div class="brain-grid">
+        <div class="brain-card">
+          <span class="brain-card-label">Brique 1</span>
+          <h4 class="brain-card-title">Skills de rédaction</h4>
+          <p class="brain-card-text">Compétences nommées (ex: <code>create-city-page</code>, <code>verify-seo</code>, <code>publish-batch</code>) qui encapsulent la trame SEO. Tu invoques par mots-clés et l'agent enchaîne validation volume → rédaction → image → publication.</p>
+        </div>
+        <div class="brain-card">
+          <span class="brain-card-label">Brique 2</span>
+          <h4 class="brain-card-title">Mémoires .md structurées</h4>
+          <p class="brain-card-text">Deux fichiers persistants : <code>memory_business.md</code> (ton positionnement, ta promesse, ton ton, tes coachs partenaires) et <code>memory_pages.md</code> (la trame d'une page-type, les variables, les règles d'unicité). Cohérence garantie sur 280 pages.</p>
+        </div>
+        <div class="brain-card">
+          <span class="brain-card-label">Brique 3</span>
+          <h4 class="brain-card-title">Pipeline d'APIs externes</h4>
+          <p class="brain-card-text"><strong>Claude</strong> pour le contenu textuel. <strong>OpenAI ou Gemini</strong> pour 2 images distinctes par page. <strong>Data For SEO</strong> pour valider le volume avant de produire — pas de page mort-née.</p>
+        </div>
+        <div class="brain-card">
+          <span class="brain-card-label">Brique 4</span>
+          <h4 class="brain-card-title">Interface terminal</h4>
+          <p class="brain-card-text">Tu ouvres une conv Claude Code et tu décides : "publie 5 pages cette semaine", "audite les 30 dernières", "ajoute la Belgique", "génère un rapport SEO". <strong>Tu pilotes le rythme — daily, weekly, monthly.</strong></p>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="term-head">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-title">claude-code · branch main</span>
+        </div>
+        <div class="term-body">
+          <span class="term-line"><span class="term-prompt">julien@site $</span> <span class="term-user">claude</span></span>
+          <span class="term-line"><span class="term-out">[chargement memory_business.md + memory_pages.md]</span></span>
+          <span class="term-line"><span class="term-out">→ prêt. quelle action ?</span></span>
+          <span class="term-line">&nbsp;</span>
+          <span class="term-line"><span class="term-prompt">julien@site $</span> <span class="term-user">crée 10 pages pour les villes en Bretagne &gt;15K habitants</span></span>
+          <span class="term-line"><span class="term-out">→ 10 villes identifiées : Rennes, Brest, Quimper, Lorient, Vannes, Saint-Malo, Saint-Brieuc, Lannion, Fougères, Concarneau</span></span>
+          <span class="term-line"><span class="term-out">→ validation Data For SEO en cours...</span></span>
+          <span class="term-line"><span class="term-out">→ rédaction Claude · génération images · publication...</span></span>
+          <span class="term-line"><span class="term-success">✓ pages publiées · maillage interne mis à jour · sitemap regénéré</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">📅 Planning</div>
+    <h2>Juin pour livrer · juillet pour ajuster.</h2>
+
+    <div class="roadmap">
+      <div class="rm-card rm-1">
+        <span class="rm-period">Juin · S1+S2</span>
+        <h4 class="rm-title">Sprint 1 — Site</h4>
+        <ul class="rm-list">
+          <li class="rm-item">5 pages design fidèle</li>
+          <li class="rm-item">SEO on-page + perf</li>
+          <li class="rm-item">Tracking + formulaire</li>
+          <li class="rm-item">Mise en ligne (Netlify)</li>
+        </ul>
+      </div>
+      <div class="rm-card rm-2">
+        <span class="rm-period">Juin · S3+S4</span>
+        <h4 class="rm-title">Sprint 2 — Moteur</h4>
+        <ul class="rm-list">
+          <li class="rm-item">Template programmatique</li>
+          <li class="rm-item">Pipeline APIs</li>
+          <li class="rm-item">Skills + mémoires</li>
+          <li class="rm-item">Test sur premières pages</li>
+        </ul>
+      </div>
+      <div class="rm-card rm-3">
+        <span class="rm-period">Juillet · S1</span>
+        <h4 class="rm-title">Révision 1</h4>
+        <ul class="rm-list">
+          <li class="rm-item">Retours sur le site</li>
+          <li class="rm-item">Ajustements design</li>
+          <li class="rm-item">Affinage prompts agent</li>
+          <li class="rm-item">Validation contenus</li>
+        </ul>
+      </div>
+      <div class="rm-card rm-4">
+        <span class="rm-period">Juillet · S2</span>
+        <h4 class="rm-title">Révision 2</h4>
+        <ul class="rm-list">
+          <li class="rm-item">Dernières corrections</li>
+          <li class="rm-item">Formation pilotage</li>
+          <li class="rm-item">Remise des clés</li>
+          <li class="rm-item">Tu pilotes en autonomie</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SITES LIVRÉS -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">🌐 Preuves — quelques sites que j'ai créés</div>
+    <h2>Pas une promesse théorique.</h2>
+    <p class="lead">Un aperçu de sites que j'ai réalisés. Tu peux ouvrir, tester, vérifier. Et un projet en cours pour un autre client, en aperçu Netlify.</p>
+
+    <div class="sites-grid">
+      <a href="https://www.kazidomi.com/fr" target="_blank" rel="noopener" class="site-card">
+        <span class="site-host">kazidomi.com/fr</span>
+        <div class="site-name">Kazidomi</div>
+        <div class="site-desc">Site e-commerce health food — refonte complète + structure SEO.</div>
+        <span class="site-tag live">Live</span>
+      </a>
+      <a href="https://decupler.com/" target="_blank" rel="noopener" class="site-card">
+        <span class="site-host">decupler.com</span>
+        <div class="site-name">Décupler — site agence</div>
+        <div class="site-desc">Site marketing, blog, méthode, contact.</div>
+        <span class="site-tag live">Live</span>
+      </a>
+      <a href="https://app.decupler.com" target="_blank" rel="noopener" class="site-card">
+        <span class="site-host">app.decupler.com</span>
+        <div class="site-name">Application Décupler</div>
+        <div class="site-desc">SaaS de monitoring de citations IA. Front + back en interne.</div>
+        <span class="site-tag live">Live</span>
+      </a>
+      <a href="https://auxo-ingenierie.com/" target="_blank" rel="noopener" class="site-card">
+        <span class="site-host">auxo-ingenierie.com</span>
+        <div class="site-name">Auxo Ingénierie</div>
+        <div class="site-desc">Site corporate B2B technique. SEO + crédibilité métier.</div>
+        <span class="site-tag live">Live</span>
+      </a>
+      <a href="https://www.allmysms.com/" target="_blank" rel="noopener" class="site-card">
+        <span class="site-host">allmysms.com</span>
+        <div class="site-name">AllMySMS</div>
+        <div class="site-desc">Site SaaS routage SMS — pages produit + landing.</div>
+        <span class="site-tag live">Live</span>
+      </a>
+      <a href="https://heroic-faun-eddd47.netlify.app/" target="_blank" rel="noopener" class="site-card">
+        <span class="site-host">heroic-faun-eddd47.netlify.app</span>
+        <div class="site-name">Projet client en cours</div>
+        <div class="site-desc">Prévisualisation Netlify d'un site en cours de livraison.</div>
+        <span class="site-tag">En cours</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NATHAN -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">👋 Qui pilote</div>
+    <h2>Tu bosses avec qui exactement.</h2>
+
+    <div class="nathan-block">
+      <div class="nathan-photo">
+        <img src="../assets/nathan.png" alt="Nathan Fenina" onerror="this.style.display='none';this.parentElement.innerHTML='NF'"/>
+      </div>
+      <div class="nathan-info">
+        <h3>Nathan Fenina</h3>
+        <span class="nathan-role">Founder Décupler · 14 ans SEO</span>
+        <p class="nathan-desc">Je fais du SEO depuis 2012 et du GEO depuis 2023. <strong>J'ai accompagné Le Point, Decathlon, Pluxee</strong> sur leur stratégie SEO/IA Search. Je conçois et je livre moi-même les sites de mes projets, sans sous-traitance. <strong>Ce que je propose ici, c'est exactement la mécanique que j'utilise chaque jour pour Décupler en interne</strong> : générer des pages SEO programmatiques pour mes propres marchés.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACK -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">💼 L'offre</div>
+    <h2>Un forfait clé en main. Pas d'abonnement caché.</h2>
+    <p class="lead">Tout est inclus : design, dev, moteur programmatique, agent Claude Code, mémoires, formation, 2 révisions. Tu repars autonome.</p>
+
+    <div class="pack-single-wrap">
+      <div class="pack-single">
+        <span class="pack-badge">Forfait one-shot</span>
+        <h3 class="pack-name">Site + moteur programmatique</h3>
+        <span class="pack-for">2 sprints en juin · 2 révisions en juillet</span>
+        <div class="pack-price">7 500€ <span style="font-size:1rem;color:var(--text-soft);font-weight:600">HT</span></div>
+        <span class="pack-price-unit">Forfait global · tout compris</span>
+
+        <div class="pack-features">
+          <div class="pack-feature"><span><strong>Sprint 1</strong> — Site vitrine 5 pages (juin S1+S2)</span></div>
+          <div class="pack-feature"><span><strong>Sprint 2</strong> — Moteur programmatique "perte de poids × ville" + agent (juin S3+S4)</span></div>
+          <div class="pack-feature"><span><strong>Révision 1</strong> en juillet — ajustements site + premiers retours sur les pages générées</span></div>
+          <div class="pack-feature"><span><strong>Révision 2</strong> en juillet — corrections finales + formation au pilotage de l'agent</span></div>
+          <div class="pack-feature"><span><strong>Agent Claude Code</strong> avec skills, mémoires, terminal</span></div>
+          <div class="pack-feature"><span><strong>Intégration APIs</strong> : Claude + OpenAI/Gemini + Data For SEO</span></div>
+          <div class="pack-feature"><span><strong>Hébergement Netlify</strong> configuré + tracking analytics</span></div>
+          <div class="pack-feature"><span><strong>Code source 100% remis</strong> — skills, mémoires, prompts. Pas de licence cachée.</span></div>
+        </div>
+
+        <div class="pack-payment">
+          <strong>Modalités de paiement :</strong> 50% à la signature (démarrage Sprint 1) · 50% à la fin de la production du site (fin Sprint 2, avant les révisions de juillet).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">🛡️ Engagements</div>
+    <h2>Trois choses claires pour avancer sereinement.</h2>
+
+    <div class="guard-grid">
+      <div class="guard-card">
+        <span class="guard-icon">✅</span>
+        <h3 class="guard-title">Garantie 30 jours</h3>
+        <p class="guard-desc">Si à la fin du <strong>Sprint 1</strong> le site livré ne te correspond pas (design, qualité, vibe) — on s'arrête là. Je rembourse 70% de l'acompte versé, sans condition. Tu repars avec le code en l'état si tu veux le finir ailleurs.</p>
+      </div>
+      <div class="guard-card">
+        <span class="guard-icon">🔐</span>
+        <h3 class="guard-title">Le code est à toi</h3>
+        <p class="guard-desc">Tout le code, les skills, les mémoires, les prompts — <strong>tout est livré dans un repo que tu possèdes</strong>. Pas de licence cachée, pas de dépendance à Décupler après la livraison. Tu peux faire évoluer ton outil avec n'importe qui (ou seul).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-final">
+      <h3>Prêt à signer ?</h3>
+      <p>Pour signer la proposition ou poser une question avant, écris directement à Nathan. On démarre le Sprint 1 dès réception de l'acompte.</p>
+      <a href="mailto:nathan@decupler.com?subject=Signature%20-%20Site%20%2B%20moteur%20programmatique%20-%207500%20EUR" class="cta-btn">nathan@decupler.com →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <p><strong>Décupler</strong> · Nathan Fenina · nathan@decupler.com</p>
+    <p>Proposition confidentielle préparée pour Julien Godin · 19 mai 2026</p>
+    <p class="small">Tarif : 7 500€ HT one-shot · 2 sprints + 2 révisions</p>
+  </div>
+</footer>
+
+</body>
+</html>
