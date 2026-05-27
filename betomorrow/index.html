@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeTomorrow × LinkedIn — Stratégie de contenu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0D0D0D;
+  --white: #F7F4EF;
+  --accent: #E8441A;
+  --accent2: #1A3CE8;
+  --muted: #6B6B6B;
+  --border: #E0DCD5;
+  --card: #FFFFFF;
+  --tag-bg: #F0EDE8;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* HERO */
+.hero {
+  background: var(--black);
+  color: var(--white);
+  padding: 64px 72px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.05);
+  pointer-events: none;
+}
+.hero-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.02;
+  max-width: 640px;
+  margin-bottom: 24px;
+}
+.hero h1 em { color: var(--accent); font-style: normal; }
+.hero-sub {
+  font-size: 16px;
+  color: rgba(247,244,239,0.6);
+  max-width: 540px;
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 48px;
+}
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 32px;
+}
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--white);
+}
+.stat-lbl {
+  font-size: 11px;
+  color: rgba(247,244,239,0.38);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-top: 2px;
+}
+
+/* LAYOUT */
+.wrap {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 72px 72px;
+}
+
+/* SECTION TITLE */
+.s-head {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.s-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--border);
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+}
+.s-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+.s-sub {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 300;
+  margin-top: 3px;
+}
+
+hr.div { border: none; border-top: 1px solid var(--border); margin: 72px 0; }
+
+/* DIAGNOSTIC */
+.diag {
+  background: var(--black);
+  color: var(--white);
+  border-radius: 18px;
+  padding: 40px 44px;
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  margin-bottom: 72px;
+}
+.diag-lbl {
+  font-size: 10px;
+  font-family: 'Syne', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.diag p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(247,244,239,0.85);
+}
+.diag p strong { color: var(--white); font-weight: 500; }
+
+/* SECTORS */
+.sectors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 72px;
+}
+.sector-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 20px 18px;
+}
+.sector-icon { font-size: 24px; margin-bottom: 10px; }
+.sector-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.sector-desc { font-size: 12px; color: var(--muted); line-height: 1.5; font-weight: 300; }
+.sector-clients { font-size: 11px; color: var(--accent); margin-top: 10px; font-weight: 400; }
+
+/* PROFILES */
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.pc {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 22px 20px;
+  transition: border-color 0.2s, transform 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+.pc:hover { border-color: #999; transform: translateY(-2px); }
+.pc.ref { border-color: var(--accent); }
+.pc.ref::after {
+  content: 'Référence';
+  position: absolute; top: 0; right: 0;
+  background: var(--accent); color: #fff;
+  font-size: 10px; font-family: 'Syne', sans-serif;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 4px 12px;
+  border-bottom-left-radius: 10px;
+}
+.av {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700; font-size: 13px;
+  margin-bottom: 14px;
+}
+.av1 { background: #FDE8E0; color: #C0381A; }
+.av2 { background: #E0E8FD; color: #1A38C0; }
+.av3 { background: #E0FDE8; color: #1A8038; }
+.av4 { background: #FDF5E0; color: #80581A; }
+.av5 { background: #F0E0FD; color: #7C1AC0; }
+.av6 { background: #E0FDFD; color: #1A8070; }
+.pc-name { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+.pc-role { font-size: 12px; color: var(--muted); font-weight: 300; margin-bottom: 12px; }
+.pc-why { font-size: 12.5px; color: #444; line-height: 1.55; border-top: 1px solid var(--border); padding-top: 12px; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+.tag {
+  font-size: 10.5px;
+  background: var(--tag-bg); color: var(--muted);
+  padding: 2px 8px; border-radius: 20px;
+}
+.tag.r { background: #FDE8E0; color: #C0381A; }
+.tag.b { background: #E0E8FD; color: #1A38C0; }
+.tag.g { background: #E0FDE8; color: #1A8038; }
+
+/* CE QU'ON FAIT */
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.offer-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 24px 24px;
+  background: var(--card);
+}
+.offer-icon { font-size: 28px; margin-bottom: 14px; }
+.offer-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px; font-weight: 700;
+  margin-bottom: 10px;
+}
+.offer-items {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 7px;
+}
+.offer-items li {
+  font-size: 13px; color: #444;
+  padding-left: 16px; position: relative; line-height: 1.45;
+}
+.offer-items li::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--accent); font-size: 11px; top: 1px;
+}
+
+/* POSTS */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.post {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 22px 18px;
+  transition: border-color 0.2s;
+}
+.post:hover { border-color: #aaa; }
+.post.hot { border-left: 3px solid var(--accent); border-radius: 0 14px 14px 0; }
+.post-sector {
+  font-size: 10px; font-family: 'Syne', sans-serif;
+  font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.ps-mob { color: #1A3CE8; }
+.ps-ind { color: #E8441A; }
+.ps-sb  { color: #1A8038; }
+.ps-en  { color: #80581A; }
+.ps-ia  { color: #7C1AC0; }
+.post-hook {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px; font-weight: 600;
+  line-height: 1.35; margin-bottom: 12px;
+}
+.post-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.fmt {
+  font-size: 11px; padding: 2px 8px;
+  border-radius: 4px; background: var(--tag-bg); color: var(--muted);
+}
+.fmt.car { background: #E0E8FD; color: #1A38C0; }
+.fmt.txt { background: #F0EDE8; color: #555; }
+.fmt.vid { background: #FDE8E0; color: #C0381A; }
+.hot-badge {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; background: var(--accent); color: #fff;
+  padding: 2px 8px; border-radius: 4px;
+}
+.src { font-size: 11px; color: #bbb; margin-left: auto; }
+
+/* ENGAGEMENT 6 MOIS */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.tl-col {
+  padding: 28px 28px 24px;
+  border-right: 1px solid var(--border);
+}
+.tl-col:last-child { border-right: none; }
+.tl-period {
+  font-size: 10px; font-family: 'Syne', sans-serif;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 8px;
+}
+.tl-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px; font-weight: 700; margin-bottom: 14px;
+}
+.tl-items {
+  list-style: none; display: flex; flex-direction: column; gap: 7px;
+}
+.tl-items li {
+  font-size: 12.5px; color: #444;
+  padding-left: 16px; position: relative; line-height: 1.45;
+}
+.tl-items li::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--accent); font-size: 10px; top: 2px;
+}
+.tl-badge {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 10px; font-family: 'Syne', sans-serif;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  background: var(--tag-bg); color: var(--muted);
+  padding: 4px 10px; border-radius: 4px;
+}
+.tl-badge.on { background: #E0FDE8; color: #1A8038; }
+
+/* LEAD MAGNET */
+.lm {
+  background: var(--black);
+  border-radius: 18px;
+  padding: 44px 52px;
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 56px;
+  align-items: center;
+}
+.lm-badge-top {
+  display: inline-block;
+  background: var(--accent); color: #fff;
+  font-size: 10px; font-family: 'Syne', sans-serif;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 4px;
+  margin-bottom: 16px;
+}
+.lm-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px; font-weight: 800;
+  line-height: 1.12; margin-bottom: 16px;
+}
+.lm-desc {
+  font-size: 14px; line-height: 1.7;
+  color: rgba(247,244,239,0.6); font-weight: 300;
+}
+.lm-steps { display: flex; flex-direction: column; gap: 14px; }
+.lm-step { display: flex; gap: 12px; align-items: flex-start; }
+.lm-n {
+  font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700;
+  color: var(--accent); background: rgba(232,68,26,0.14);
+  width: 24px; height: 24px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.lm-t { font-size: 13px; color: rgba(247,244,239,0.75); line-height: 1.5; }
+
+/* FOOTER */
+footer {
+  background: var(--black);
+  color: rgba(247,244,239,0.35);
+  padding: 28px 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+footer strong { color: rgba(247,244,239,0.65); }
+
+@media (max-width: 860px) {
+  .hero { padding: 40px 24px; }
+  .hero h1 { font-size: 36px; }
+  .wrap { padding: 48px 24px; }
+  .sectors, .profiles, .offer-grid, .posts, .timeline { grid-template-columns: 1fr; }
+  .lm { grid-template-columns: 1fr; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; }
+  footer { flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-label">Proposition LinkedIn · BeTomorrow × Décupler</div>
+  <h1>Plus de 20 ans<br>de cas clients.<br><em>Zéro lead</em><br>LinkedIn.</h1>
+  <p class="hero-sub">EDF, Suez, Vinci, Apple. BeTomorrow a les projets qui font rêver les DSI et CDO de France. Il manque juste une voix pour les raconter au bon endroit, au bon moment.</p>
+  <div class="hero-stats">
+    <div>
+      <div class="stat-num">1</div>
+      <div class="stat-lbl">lead LinkedIn en 3 ans</div>
+    </div>
+    <div>
+      <div class="stat-num">8×</div>
+      <div class="stat-lbl">plus de reach profil perso vs page entreprise</div>
+    </div>
+    <div>
+      <div class="stat-num">3</div>
+      <div class="stat-lbl">posts / semaine pour changer ça</div>
+    </div>
+    <div>
+      <div class="stat-num">6 mois</div>
+      <div class="stat-lbl">pour des résultats mesurables</div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- DIAGNOSTIC -->
+  <div class="diag">
+    <div style="font-size:32px;flex-shrink:0;margin-top:2px">⚡</div>
+    <div>
+      <div class="diag-lbl">Le constat</div>
+      <p>BeTomorrow publie régulièrement en tant que <strong>page entreprise</strong> — use cases, événements, parutions presse. Mais en 2026, les pages génèrent <strong>8× moins de reach</strong> que les profils personnels. Les décideurs que vous ciblez font confiance aux individus, pas aux logos. Résultat : une visibilité qui ne se traduit pas en leads, et une seule opportunité entrante LinkedIn en 3 ans. <strong>C'est exactement ce qu'on va changer.</strong></p>
+    </div>
+  </div>
+
+  <!-- CIBLES SECTORIELLES -->
+  <div class="s-head">
+    <div class="s-num">01</div>
+    <div>
+      <div class="s-title">Vos cibles prioritaires</div>
+      <div class="s-sub">Les secteurs sur lesquels concentrer le contenu pour générer des leads qualifiés</div>
+    </div>
+  </div>
+
+  <div class="sectors">
+    <div class="sector-card">
+      <div class="sector-icon">🚇</div>
+      <div class="sector-name">Mobilité & Transport public</div>
+      <div class="sector-desc">Opérateurs de mobilité, MaaS, smart ticketing, interfaces voyageurs et agents terrain.</div>
+      <div class="sector-clients">Salon juin → priorité immédiate</div>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🏭</div>
+      <div class="sector-name">Industrie terrain</div>
+      <div class="sector-desc">Opérateurs connectés, maintenance prédictive, jumeaux numériques, interfaces métiers à risque.</div>
+      <div class="sector-clients">Suez · Vinci → cas clients existants</div>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">🏢</div>
+      <div class="sector-name">Smart Building</div>
+      <div class="sector-desc">Facility management, domotisation, pilotage des bâtiments, interfaces multi-sources de données.</div>
+      <div class="sector-clients">Cible montante · fort potentiel</div>
+    </div>
+    <div class="sector-card">
+      <div class="sector-icon">⚡</div>
+      <div class="sector-name">Énergie</div>
+      <div class="sector-desc">Producteurs, fabricants de PAC, interfaces client énergie, pilotage consommation.</div>
+      <div class="sector-clients">EDF Solutions Solaires → cas clé</div>
+    </div>
+  </div>
+
+  <!-- COMPTES D'INSPIRATION -->
+  <div class="s-head">
+    <div class="s-num">02</div>
+    <div>
+      <div class="s-title">Comptes d'inspiration</div>
+      <div class="s-sub">Profils actifs en 2025 · même univers B2B tech/produit · taille comparable</div>
+    </div>
+  </div>
+
+  <div class="profiles">
+
+    <div class="pc ref">
+      <div class="av av1">PC</div>
+      <div class="pc-name">Philippe Corrot</div>
+      <div class="pc-role">CEO Mirakl · Paris · ~15K abonnés · Actif 2025</div>
+      <div class="pc-why">Mix vision marché + use cases grands comptes (Toyota, Décathlon, Macy's). Parle directement aux DSI et CDO sans jamais sonner corporate. Posts "what we see in the market" + décisions business tranchées. <strong>Template parfait pour BeTomorrow.</strong></div>
+      <div class="tags"><span class="tag r">Actif hebdo</span><span class="tag">Vision marché</span><span class="tag">Grands comptes</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="av av2">TR</div>
+      <div class="pc-name">Thibault Renouf</div>
+      <div class="pc-role">co-CEO Partoo · SaaS B2B · ~20K abonnés · Actif 2025</div>
+      <div class="pc-why">Meilleur exemple français de CEO B2B tech qui publie vraiment. "Build in public" à la française : coulisses produit, chiffres, décisions difficiles. Ton authentique, 0% corporate. 50+ commentaires par post régulièrement.</div>
+      <div class="tags"><span class="tag b">Build in public</span><span class="tag">Coulisses produit</span><span class="tag">Très engagé</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="av av3">FB</div>
+      <div class="pc-name">Fabrice Bernhard</div>
+      <div class="pc-role">co-CEO Theodo · Studio produit · ~8K abonnés</div>
+      <div class="pc-why">Concurrent direct de BeTomorrow. Posts lean/agile, REX de projets, vision organisation. Sobre et technique. La preuve qu'un studio produit peut publier sans devenir influenceur ou perdre sa crédibilité.</div>
+      <div class="tags"><span class="tag g">Studio produit</span><span class="tag">REX projets</span><span class="tag">Sobre</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="av av4">EC</div>
+      <div class="pc-name">Éric Carreel</div>
+      <div class="pc-role">Fondateur Withings · IoT/Industrie · ~12K abonnés</div>
+      <div class="pc-why">Fondateur tech français qui parle d'interface, de données, d'usage terrain. Crosse exactement les thèmes BeTomorrow. Posts courts, vision forte. Corporate mais personnel — l'équilibre exact à viser.</div>
+      <div class="tags"><span class="tag">IoT / Industrie</span><span class="tag">Vision fondateur</span><span class="tag">Posts courts</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="av av5">AC</div>
+      <div class="pc-name">Arnaud Cliquennois</div>
+      <div class="pc-role">IA en entreprise · PME/ETI · ~5K abonnés · Très actif 2025</div>
+      <div class="pc-why">Modèle pour les posts "IA appliquée à l'industrie". Traduit des sujets complexes en posts accessibles. 4 posts/semaine, 200+ likes. Son audience : DSI de PME/ETI industrielles — exactement l'ICP BeTomorrow.</div>
+      <div class="tags"><span class="tag r">4×/semaine</span><span class="tag">IA industrielle</span><span class="tag">DSI PME/ETI</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="av av6">TB</div>
+      <div class="pc-name">thoughtbot (US)</div>
+      <div class="pc-role">Studio produit · NYC · ~20K · Même ADN que BeTomorrow</div>
+      <div class="pc-why">Live stream UX audits, case studies carousel, posts "how we built X". La référence US pour un studio produit qui sait se raconter. Ce que BeTomorrow pourrait faire avec ses projets EDF, Suez, Vinci.</div>
+      <div class="tags"><span class="tag b">US · Même ADN</span><span class="tag">UX live</span><span class="tag">Case studies</span></div>
+    </div>
+
+  </div>
+
+  <hr class="div">
+
+  <!-- CE QU'ON FAIT -->
+  <div class="s-head">
+    <div class="s-num">03</div>
+    <div>
+      <div class="s-title">Ce qu'on fait concrètement</div>
+      <div class="s-sub">3 posts par semaine · 1 profil ghostwrité · Modération incluse</div>
+    </div>
+  </div>
+
+  <div class="offer-grid">
+
+    <div class="offer-card">
+      <div class="offer-icon">✍️</div>
+      <div class="offer-title">Ghostwriting éditorial</div>
+      <ul class="offer-items">
+        <li>Stratégie éditoriale mensuelle alignée sur vos cibles sectorielles</li>
+        <li>Calendrier de publication sur 4 semaines</li>
+        <li>Rédaction de 3 posts/semaine (texte, hooks, angle)</li>
+        <li>1 carousel par mois tiré d'un cas client existant</li>
+        <li>Validation avec le profil avant publication</li>
+      </ul>
+    </div>
+
+    <div class="offer-card">
+      <div class="offer-icon">💬</div>
+      <div class="offer-title">Modération & engagement</div>
+      <ul class="offer-items">
+        <li>Réponse aux commentaires dans la 1ère heure après publication — critique pour l'algorithme</li>
+        <li>Gestion des DMs entrants qualifiés</li>
+        <li>Traitement des réponses aux posts lead magnet (commentaires "MATURITÉ")</li>
+        <li>Relances courtes sur les profils les plus engagés</li>
+      </ul>
+    </div>
+
+    <div class="offer-card">
+      <div class="offer-icon">📊</div>
+      <div class="offer-title">Pilotage mensuel</div>
+      <ul class="offer-items">
+        <li>Rapport mensuel : impressions, engagement, DMs reçus, leads identifiés</li>
+        <li>Identification des posts les plus performants à booster en paid</li>
+        <li>Ajustement éditorial selon les retours terrain</li>
+        <li>Point bilan au mois 3 pour valider la direction</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr class="div">
+
+  <!-- POSTS CONCRETS -->
+  <div class="s-head">
+    <div class="s-num">04</div>
+    <div>
+      <div class="s-title">12 posts à produire · Premier mois</div>
+      <div class="s-sub">Tirés directement des projets et ressources BeTomorrow · Calibrés sur vos 4 cibles</div>
+    </div>
+  </div>
+
+  <div class="posts">
+
+    <div class="post hot">
+      <div class="post-sector ps-mob">🚇 Mobilité & Transport</div>
+      <div class="post-hook">"Réussir un projet MaaS : au-delà de l'application, c'est un enjeu d'architecture. Ce que la plupart des équipes ratent dès le départ."</div>
+      <div class="post-meta"><span class="fmt txt">Texte seul</span><span class="hot-badge">🔥 J+1</span></div>
+    </div>
+
+    <div class="post hot">
+      <div class="post-sector ps-mob">🚇 Mobilité & Transport</div>
+      <div class="post-hook">"On a travaillé avec des opérateurs de mobilité dans 3 pays. Voici les 5 erreurs UX qui se répètent à chaque fois — et comment les éviter."</div>
+      <div class="post-meta"><span class="fmt car">Carousel 6 slides</span><span class="hot-badge">🔥 J+1</span></div>
+    </div>
+
+    <div class="post hot">
+      <div class="post-sector ps-ind">🏭 Industrie terrain</div>
+      <div class="post-hook">"Suez nous a confié la sécurité de ses agents dans les réseaux souterrains. 3 décisions UX qu'on n'attendait pas — et qui ont tout changé."</div>
+      <div class="post-meta"><span class="fmt car">Carousel 5 slides</span><span class="hot-badge">🔥 priorité</span><span class="src">Source : cas client Suez</span></div>
+    </div>
+
+    <div class="post">
+      <div class="post-sector ps-ind">🏭 Industrie terrain</div>
+      <div class="post-hook">"Opérateur terrain + interface qui rame = risque d'accident. Notre approche UX pour les métiers à risque élevé dans l'industrie."</div>
+      <div class="post-meta"><span class="fmt txt">Texte seul</span></div>
+    </div>
+
+    <div class="post">
+      <div class="post-sector ps-ind">🏭 Industrie terrain</div>
+      <div class="post-hook">"La vraie raison pour laquelle les projets digitaux industriels échouent. Ce n'est pas la tech. Ce n'est pas le budget. C'est ça."</div>
+      <div class="post-meta"><span class="fmt txt">Texte — hook fort</span></div>
+    </div>
+
+    <div class="post">
+      <div class="post-sector ps-sb">🏢 Smart Building</div>
+      <div class="post-hook">"Facility management : vous avez la donnée. Vos équipes terrain ne savent pas comment y accéder. Le problème n'est pas technique."</div>
+      <div class="post-meta"><span class="fmt txt">Texte seul</span></div>
+    </div>
+
+    <div class="post">
+      <div class="post-sector ps-sb">🏢 Smart Building</div>
+      <div class="post-hook">"Domotiser un bâtiment en 2026 : ce n'est plus un sujet tech. C'est un sujet d'expérience utilisateur. Voilà la différence."</div>
+      <div class="post-meta"><span class="fmt car">Carousel</span></div>
+    </div>
+
+    <div class="post hot">
+      <div class="post-sector ps-en">⚡ Énergie</div>
+      <div class="post-hook">"EDF nous a demandé de transformer un portail de lecture en compagnon d'action. Les 6 décisions UX qu'on a prises — et pourquoi."</div>
+      <div class="post-meta"><span class="fmt car">Carousel 7 slides</span><span class="hot-badge">🔥 priorité</span><span class="src">EDF Solutions Solaires</span></div>
+    </div>
+
+    <div class="post">
+      <div class="post-sector ps-en">⚡ Énergie</div>
+      <div class="post-hook">"Fabricants de PAC : vous avez une app. Vos clients ne l'utilisent pas. Voilà pourquoi — et comment on règle ça."</div>
+      <div class="post-meta"><span class="fmt txt">Texte seul</span></div>
+    </div>
+
+    <div class="post">
+      <div class="post-sector ps-ia">🤖 IA produit</div>
+      <div class="post-hook">"L'IA agentique comme levier de gestion énergétique optimisée. Ce qu'on a appris en le construisant pour nos clients industriels."</div>
+      <div class="post-meta"><span class="fmt txt">Texte + infographie</span><span class="src">Source : Les Échos</span></div>
+    </div>
+
+    <div class="post">
+      <div class="post-sector ps-ia">🤖 IA produit</div>
+      <div class="post-hook">"MCP, Apps SDK, ACP : les 3 protocoles qui vont redéfinir les interfaces B2B d'ici 18 mois. Ce que vos équipes doivent comprendre maintenant."</div>
+      <div class="post-meta"><span class="fmt car">Carousel vulgarisation</span><span class="src">Source : ebook BeTomorrow</span></div>
+    </div>
+
+    <div class="post hot">
+      <div class="post-sector" style="color:#7C1AC0;font-size:10px;font-family:'Syne',sans-serif;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:8px">💡 Lead magnet</div>
+      <div class="post-hook">"Test de maturité digitale de votre interface métier — 5 questions, benchmark sectoriel offert. Commentez MATURITÉ."</div>
+      <div class="post-meta"><span class="fmt txt">Texte + CTA commentaire</span><span class="hot-badge">🔥 newsletter</span></div>
+    </div>
+
+  </div>
+
+  <hr class="div">
+
+  <!-- LEAD MAGNET -->
+  <div class="s-head">
+    <div class="s-num">05</div>
+    <div>
+      <div class="s-title">Le lead magnet — clé de voûte du dispositif</div>
+      <div class="s-sub">Zéro dev interne · Faisable en 2 jours · Collecte d'emails directe</div>
+    </div>
+  </div>
+
+  <div class="lm">
+    <div>
+      <div class="lm-badge-top">Priorité 1</div>
+      <div class="lm-title">Test de maturité<br>«&nbsp;Interface Digitale Métier&nbsp;»</div>
+      <div class="lm-desc">Un questionnaire de 5 questions sur Tally ou Typeform, destiné aux DSI, CDO et responsables innovation des secteurs mobilité, industrie, smart building et énergie. Résultat personnalisé envoyé par email avec benchmark sectoriel. CTA LinkedIn : "Commentez MATURITÉ — je vous envoie le test."<br><br>Les décideurs industriels adorent se benchmarker par rapport à leurs pairs. C'est un outil de diagnostic, pas une publicité. Chaque commentaire devient un contact qualifié.</div>
+    </div>
+    <div class="lm-steps">
+      <div class="lm-step"><div class="lm-n">1</div><div class="lm-t">Créer le questionnaire Tally (5 questions, 3 profils de résultat)</div></div>
+      <div class="lm-step"><div class="lm-n">2</div><div class="lm-t">Email de résultat automatique avec benchmark sectoriel BeTomorrow</div></div>
+      <div class="lm-step"><div class="lm-n">3</div><div class="lm-t">Publier le post "Commentez MATURITÉ" sur le profil ghostwrité</div></div>
+      <div class="lm-step"><div class="lm-n">4</div><div class="lm-t">DM chaque commentateur → envoi du lien + proposition d'échange</div></div>
+      <div class="lm-step"><div class="lm-n">5</div><div class="lm-t">Intégrer les emails à la newsletter Shortcut de BeTomorrow</div></div>
+    </div>
+  </div>
+
+  <hr class="div">
+
+  <!-- ENGAGEMENT 6 MOIS -->
+  <div class="s-head">
+    <div class="s-num">06</div>
+    <div>
+      <div class="s-title">Un engagement sur 6 mois</div>
+      <div class="s-sub">LinkedIn organique prend 8–12 semaines pour générer des signaux clairs · Bilan au mois 3</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-col">
+      <div class="tl-period">Mois 1–2 · Setup & Lancement</div>
+      <div class="tl-title">On pose les bases</div>
+      <ul class="tl-items">
+        <li>Choix et optimisation du profil (bannière, bio, CTA)</li>
+        <li>Calibrage de la ligne éditoriale sur vos 4 cibles</li>
+        <li>Rédaction et publication des 3 premiers posts</li>
+        <li>Création et lancement du test de maturité</li>
+        <li>Mise en place du process de modération</li>
+      </ul>
+      <span class="tl-badge">Premiers engagements visibles</span>
+    </div>
+    <div class="tl-col">
+      <div class="tl-period">Mois 3–4 · Bilan & Accélération</div>
+      <div class="tl-title">On ajuste et on accélère</div>
+      <ul class="tl-items">
+        <li>Bilan M3 : impressions, DMs, leads identifiés</li>
+        <li>Identification des formats et sujets qui performent</li>
+        <li>Boost paid des 2 meilleurs posts</li>
+        <li>2e vague de posts lead magnet</li>
+        <li>Premiers leads qualifiés entrants</li>
+      </ul>
+      <span class="tl-badge on">Point de décision</span>
+    </div>
+    <div class="tl-col">
+      <div class="tl-period">Mois 5–6 · Consolidation</div>
+      <div class="tl-title">On capitalise</div>
+      <ul class="tl-items">
+        <li>Élargissement des sujets sur la base des retours marché</li>
+        <li>Newsletter Shortcut alimentée par les leads LinkedIn</li>
+        <li>Carousel Vinci + Smart Building complets</li>
+        <li>Bilan final + recommandation pour le renouvellement</li>
+        <li>Proposition d'extension à un 2e profil</li>
+      </ul>
+      <span class="tl-badge">Reconduction 12 mois</span>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div>Préparé par <strong>Nathan Fenina · Décupler</strong> — Document confidentiel</div>
+  <div>Mai 2026</div>
+</footer>
+
+</body>
+</html>
