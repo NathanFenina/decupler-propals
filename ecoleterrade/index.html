@@ -1,1 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Proposition Décupler × École Terrade — Audit + pilotage SEO/GEO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fafbfc;
+  --bg-card:#ffffff;
+  --bg-soft:#f1f5f9;
+  --bg-violet-soft:#f5f3ff;
+  --bg-green-soft:#ecfdf5;
+  --bg-red-soft:#fef2f2;
+  --bg-amber-soft:#fffbeb;
+  --text:#0f172a;
+  --text-mid:#475569;
+  --text-soft:#64748b;
+  --text-mute:#94a3b8;
+  --border:#e2e8f0;
+  --border-strong:#cbd5e1;
+  --violet:#7B5CFA;
+  --violet-2:#667eea;
+  --violet-light:#a78bfa;
+  --green:#10b981;
+  --green-2:#059669;
+  --red:#ef4444;
+  --amber:#f59e0b;
+  --F:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --M:'JetBrains Mono',monospace;
+  --shadow-sm:0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 16px rgba(15,23,42,.06);
+  --shadow-md:0 8px 24px rgba(15,23,42,.08);
+  --shadow-lg:0 12px 32px rgba(15,23,42,.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--F);background:var(--bg);color:var(--text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{color:var(--text);line-height:1.15;font-weight:800;letter-spacing:-.02em}
+p{color:var(--text-mid)}
+a{color:var(--violet);text-decoration:none}
+ul{list-style:none}
 
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* TOP BAR */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.nav-logo{font-size:15px;font-weight:800}
+.nav-logo .dot{color:var(--violet)}
+.nav-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--M);font-size:11px;font-weight:600;color:var(--amber);background:var(--bg-amber-soft);border:1px solid #fde68a;padding:5px 12px;border-radius:20px}
+.nav-tag .dot{width:6px;height:6px;background:var(--amber);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.nav-cta{padding:9px 18px;background:var(--violet);color:#fff;font-size:13px;font-weight:700;border-radius:8px;transition:background .2s}
+.nav-cta:hover{background:var(--violet-2);color:#fff}
+
+/* HERO */
+.hero{padding:64px 0 40px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--bg-violet-soft);border:1px solid #ddd6fe;color:var(--violet);font-family:var(--M);font-size:11px;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:24px;letter-spacing:.06em;text-transform:uppercase}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:900;margin-bottom:18px;line-height:1.1}
+.hl-v{color:var(--violet)}
+.hl-r{color:var(--red)}
+.hl-g{color:var(--green)}
+.hero-sub{font-size:1.05rem;max-width:680px;margin-bottom:32px;line-height:1.65}
+.hero-sub strong{color:var(--text)}
+
+/* INTRO BIO BAR */
+.intro-bar{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:0}
+.intro-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-sm)}
+.intro-avatar{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0}
+.av-client{background:linear-gradient(135deg,#10b981,#047857)}
+.av-nathan{background:linear-gradient(135deg,#7B5CFA,#5b21b6)}
+.intro-label{font-family:var(--M);font-size:10px;font-weight:600;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:2px}
+.intro-name{font-size:14px;font-weight:700;color:var(--text)}
+.intro-bio{font-size:12px;color:var(--text-soft);margin-top:1px;line-height:1.4}
+
+/* SECTION COMMON */
+.section{padding:72px 0;border-top:1px solid var(--border)}
+.section-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--M);font-size:10px;font-weight:600;color:var(--violet);background:var(--bg-violet-soft);padding:5px 12px;border-radius:20px;margin-bottom:14px;letter-spacing:.08em;text-transform:uppercase}
+.section h2{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
+.section .lead{font-size:1rem;color:var(--text-mid);max-width:640px;margin-bottom:36px;line-height:1.65}
+
+/* DIAGNOSTIC ÉMOTIONNEL */
+.diag-emo{background:var(--bg-card);border:1px solid var(--border);border-radius:18px;padding:32px;margin-bottom:20px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.diag-emo::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--amber))}
+.diag-title{font-size:1.05rem;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.diag-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+.diag-stat{background:var(--bg-red-soft);border:1px solid #fecaca;border-radius:12px;padding:18px;text-align:center}
+.diag-num{font-size:1.7rem;font-weight:900;color:var(--red);line-height:1;display:block}
+.diag-label{font-family:var(--M);font-size:10px;font-weight:600;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;margin-top:6px;display:block}
+.pain-list{display:flex;flex-direction:column;gap:10px}
+.pain-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--bg-red-soft);border:1px solid #fecaca;border-radius:10px;font-size:.92rem;color:var(--text-mid);line-height:1.55}
+.pain-item::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:7px}
+.pain-item strong{color:var(--text);font-weight:600}
+
+/* OPP DESIRED */
+.opp-desired{background:linear-gradient(135deg,var(--bg-green-soft),var(--bg-violet-soft));border:1px solid #c7d2fe;border-radius:18px;padding:32px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.opp-desired::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--violet))}
+.opp-desired h3{font-size:1.05rem;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.opp-text{font-size:.95rem;color:var(--text-mid);line-height:1.65;margin-bottom:18px}
+.opp-text strong{color:var(--green-2);font-weight:700}
+.opp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.opp-stat{text-align:center;padding:14px;background:rgba(255,255,255,.5);border-radius:10px;border:1px solid rgba(16,185,129,.15)}
+.opp-num{font-size:1.6rem;font-weight:900;color:var(--green-2);line-height:1;display:block}
+.opp-label{font-family:var(--M);font-size:10px;font-weight:600;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;margin-top:6px;display:block}
+
+/* MATH TABLES */
+.math-block{margin-bottom:32px}
+.math-block h3{font-size:1.05rem;font-weight:700;margin-bottom:14px}
+.math-table{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.math-table table{width:100%;border-collapse:collapse}
+.math-table th, .math-table td{padding:13px 18px;text-align:left;font-size:.88rem;border-bottom:1px solid var(--border)}
+.math-table th{font-family:var(--M);font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;background:var(--bg-soft);font-weight:600}
+.math-table tbody tr:last-child td{border-bottom:none}
+.math-table tbody tr:hover{background:var(--bg-soft)}
+.math-table .label{color:var(--text);font-weight:600}
+.math-table .you{color:var(--red);font-weight:700;font-family:var(--M)}
+.math-table .target{color:var(--green-2);font-weight:700;font-family:var(--M)}
+.math-table .kd{color:var(--violet);font-family:var(--M);font-weight:600}
+.math-table .vol{color:var(--text);font-family:var(--M);font-weight:600}
+.conclusion{background:var(--bg-violet-soft);border:1px solid #ddd6fe;border-radius:12px;padding:18px 20px;font-size:.92rem;color:var(--text-mid);line-height:1.65;margin-top:14px}
+.conclusion strong{color:var(--text)}
+
+/* DELIVERABLES BLOCK */
+.deliv-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px}
+.deliv-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.deliv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--violet),var(--violet-light))}
+.deliv-num{font-family:var(--M);font-size:11px;font-weight:700;color:var(--violet);background:var(--bg-violet-soft);padding:4px 10px;border-radius:6px;display:inline-block;margin-bottom:12px;letter-spacing:.06em}
+.deliv-title{font-size:1.05rem;font-weight:800;margin-bottom:8px}
+.deliv-desc{font-size:.88rem;color:var(--text-mid);line-height:1.6;margin-bottom:14px}
+.deliv-list{display:flex;flex-direction:column;gap:7px}
+.deliv-item{font-size:.84rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.deliv-item::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0;margin-top:1px}
+.deliv-item strong{color:var(--text);font-weight:600}
+
+/* PRICE BLOCK */
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.price-block{background:linear-gradient(135deg,var(--bg-violet-soft),#fff);border:2px solid var(--violet);border-radius:20px;padding:32px;text-align:center;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.price-block::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--violet),var(--violet-light))}
+.price-block.alt{border-color:var(--green);background:linear-gradient(135deg,var(--bg-green-soft),#fff)}
+.price-block.alt::before{background:linear-gradient(90deg,var(--green),#34d399)}
+.price-label{font-family:var(--M);font-size:11px;font-weight:700;color:var(--violet);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;display:block}
+.price-block.alt .price-label{color:var(--green-2)}
+.price-amount{font-size:2.6rem;font-weight:900;color:var(--text);line-height:1;margin-bottom:8px}
+.price-unit{font-family:var(--M);font-size:13px;color:var(--text-soft);margin-bottom:20px;display:block}
+.price-includes{font-size:.9rem;color:var(--text-mid);max-width:520px;margin:0 auto;line-height:1.6;text-align:left}
+.price-includes strong{color:var(--text)}
+
+/* TIMELINE */
+.timeline{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:var(--shadow-sm)}
+.timeline-row{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.timeline-row:last-child{border-bottom:none;padding-bottom:0}
+.timeline-row:first-child{padding-top:0}
+.timeline-month{font-family:var(--M);font-size:11px;font-weight:700;color:var(--violet);background:var(--bg-violet-soft);padding:6px 10px;border-radius:6px;text-transform:uppercase;letter-spacing:.06em;text-align:center;align-self:center}
+.timeline-content{font-size:.92rem;color:var(--text-mid);line-height:1.6}
+.timeline-content strong{color:var(--text);font-weight:700}
+
+/* GUARANTEE / URGENCY */
+.guard-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.guard-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:var(--shadow-sm)}
+.guard-icon{font-size:1.5rem;margin-bottom:10px;display:block}
+.guard-title{font-size:.98rem;font-weight:800;margin-bottom:6px}
+.guard-desc{font-size:.86rem;color:var(--text-mid);line-height:1.6}
+.guard-desc strong{color:var(--text)}
+
+/* OUT OF SCOPE */
+.scope-out{background:var(--bg-amber-soft);border:1px solid #fde68a;border-radius:14px;padding:22px;margin-top:24px}
+.scope-out h3{font-size:.98rem;font-weight:800;margin-bottom:10px;color:#92400e}
+.scope-out p{font-size:.88rem;color:#78350f;line-height:1.6}
+.scope-out p strong{color:#451a03}
+
+/* CTA */
+.ctas{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cta-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s,border-color .25s}
+.cta-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--violet-light)}
+.cta-icon{font-size:1.6rem;margin-bottom:10px;display:block}
+.cta-title{font-size:.98rem;font-weight:800;margin-bottom:6px}
+.cta-desc{font-size:.82rem;color:var(--text-mid);line-height:1.55;margin-bottom:14px}
+.cta-btn{display:inline-block;padding:10px 18px;font-family:var(--M);font-size:11px;font-weight:700;border-radius:8px;letter-spacing:.04em;text-transform:uppercase;transition:opacity .2s,transform .15s}
+.cta-btn:hover{opacity:.9;transform:translateY(-1px)}
+.cta-btn.violet{background:var(--violet);color:#fff}
+.cta-btn.green{background:var(--green);color:#fff}
+.cta-btn.amber{background:var(--amber);color:#fff}
+
+/* CLIENTS */
+.client-logos{margin-top:32px;padding:18px 22px;background:var(--bg-soft);border-radius:12px;text-align:center}
+.client-logos-label{font-family:var(--M);font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.client-logos-list{font-size:.88rem;color:var(--text);font-weight:500}
+
+/* FOOTER */
+footer{padding:40px 0 32px;text-align:center;border-top:1px solid var(--border);margin-top:40px}
+footer p{font-size:.84rem;color:var(--text-soft);margin-bottom:4px}
+footer p strong{color:var(--text);font-weight:700}
+footer .small{font-size:11px;color:var(--text-mute);font-family:var(--M);margin-top:14px}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+  .hero{padding:48px 0 32px}
+  .section{padding:48px 0}
+  .intro-bar{grid-template-columns:1fr}
+  .diag-stats, .opp-stats, .ctas, .deliv-grid, .price-grid{grid-template-columns:1fr}
+  .guard-grid{grid-template-columns:1fr}
+  .nav-inner{justify-content:center}
+  .timeline-row{grid-template-columns:1fr}
+  .price-amount{font-size:2.2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap nav-inner">
+    <div class="nav-logo">Décupler<span class="dot"> ×</span> École Terrade</div>
+    <span class="nav-tag"><span class="dot"></span> Décision visée avant le 30/06/2026</span>
+    <a href="https://calendly.com/fenina-nathan/consultationstrategique" target="_blank" rel="noopener" class="nav-cta">Lancer l'audit →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">📋 Proposition d'accompagnement · Juin 2026</div>
+    <h1>13 000 mots-clés indexés, <span class="hl-v">une vraie autorité IA</span>…<br>mais <span class="hl-r">piloté à l'aveugle et en opportuniste.</span></h1>
+    <p class="hero-sub">Terrade est solidement positionné sur ses métiers (CAP coiffure, CAP esthétique, BP) et son SEO porte déjà jusque dans ChatGPT. Mais ~50% du trafic dépend de la marque, l'attribution des leads est floue, et les nouvelles verticales (e-learning, petite enfance) n'ont pas encore de socle SEO/GEO. <strong>Voici comment on structure ça : un audit cet été, puis un pilotage expert dès septembre.</strong></p>
+
+    <!-- INTRO BIO BAR -->
+    <div class="intro-bar">
+      <div class="intro-card">
+        <div class="intro-avatar av-client">JT</div>
+        <div>
+          <span class="intro-label">Préparé pour</span>
+          <div class="intro-name">Jet · École Terrade</div>
+          <div class="intro-bio">Marketing / Acquisition · ~50 campus en France</div>
+        </div>
+      </div>
+      <div class="intro-card">
+        <div class="intro-avatar av-nathan">NF</div>
+        <div>
+          <span class="intro-label">Par</span>
+          <div class="intro-name">Nathan Fenina · Founder Decupler</div>
+          <div class="intro-bio">14 ans SEO · Top 20 SEO France · Decathlon, SG, Le Point</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSTIC -->
+<section class="section" style="padding-top:48px">
+  <div class="wrap">
+    <div class="section-tag">⚠️ Diagnostic — Là où vous en êtes</div>
+    <h2>L'état des lieux <span class="hl-r">visibilité Terrade</span> aujourd'hui.</h2>
+    <p class="lead">Pas de jugement — les faits remontés en RDV par Jet, croisés avec ce qu'on observe côté SEMrush et HubSpot. Tout est confirmé en détail par l'audit.</p>
+
+    <div class="diag-emo">
+      <h3 class="diag-title">📉 Ce qu'on voit en ouvrant le capot</h3>
+      <div class="diag-stats">
+        <div class="diag-stat">
+          <span class="diag-num">~50%</span>
+          <span class="diag-label">du trafic dépend de la marque</span>
+        </div>
+        <div class="diag-stat">
+          <span class="diag-num">20%</span>
+          <span class="diag-label">des leads viennent du SEO (mal attribués)</span>
+        </div>
+        <div class="diag-stat">
+          <span class="diag-num">0</span>
+          <span class="diag-label">stratégie GEO structurée à ce jour</span>
+        </div>
+      </div>
+      <div class="pain-list">
+        <div class="pain-item">
+          <span><strong>Vous pilotez à l'aveugle.</strong> Vous savez qu'un lead vient du SEO, mais pas de quel mot-clé. Impossible aujourd'hui de distinguer marque / hors-marque dans la conversion HubSpot — donc impossible de savoir quels efforts SEO génèrent réellement des inscriptions.</span>
+        </div>
+        <div class="pain-item">
+          <span><strong>Votre croissance repose sur la notoriété, pas sur le SEO.</strong> ~50% du trafic est brandé. C'est rassurant, mais ça veut dire que le levier hors-marque — celui qui va chercher de nouveaux apprenants — est sous-exploité.</span>
+        </div>
+        <div class="pain-item">
+          <span><strong>Les nouvelles verticales partent de zéro.</strong> E-learning beauté et petite enfance sont vos relais de croissance, mais sans socle SEO/GEO dédié, Google et les IA n'ont rien à associer à Terrade sur ces sujets.</span>
+        </div>
+        <div class="pain-item">
+          <span><strong>Le travail GEO/autorité est opportuniste, pas structuré.</strong> Données structurées à refondre, Store Locator pas encore en place, citations sur les sites-sources des IA identifiées mais non traitées. Beaucoup d'énergie, pas de plan d'action ni de moteur qui donne le rythme.</span>
+        </div>
+        <div class="pain-item">
+          <span><strong>L'accompagnement actuel ne couvre pas le GEO</strong> et le pilotage s'est dégradé (chargé de compte junior). Vous cherchez un expert senior réactif, moteur, qui forme l'équipe — pas un exécutant de plus.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPPORTUNITY DESIRED -->
+    <div class="opp-desired">
+      <h3>🎯 Ce qu'on met en place</h3>
+      <p class="opp-text">Un <strong>audit SEO/GEO complet</strong> cet été (état des lieux + roadmap priorisée 6-12 mois), puis un <strong>pilotage expert dès septembre</strong> : je donne le rythme, je fais le lien avec Les Bons Tech sur la technique, je produis ce que votre équipe ne peut pas absorber, et je fais monter votre équipe en compétence. Le tout en exploitant une vraie force que vous avez déjà : une <strong>visibilité IA à 57% sur SEMrush</strong> — une base solide sur laquelle capitaliser.</p>
+      <div class="opp-stats">
+        <div class="opp-stat"><span class="opp-num">2</span><span class="opp-label">Verticales à lancer (e-learning + petite enfance)</span></div>
+        <div class="opp-stat"><span class="opp-num">6-12</span><span class="opp-label">Mois de roadmap pilotée</span></div>
+        <div class="opp-stat"><span class="opp-num">~50</span><span class="opp-label">Campus à rendre cohérents (site / GMB / social)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATH BLOCK -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">📊 Ce que l'audit met sur la table</div>
+    <h2>Des chiffres réels, pas des promesses.</h2>
+    <p class="lead">Je ne vous balance pas de volumes de mots-clés inventés dans une propal. Voici les seules données solides à ce stade — le reste (volumes précis, KD, gap concurrentiel, prompts IA) est exactement ce que l'audit produit.</p>
+
+    <div class="math-block">
+      <h3>Votre situation actuelle — données confirmées</h3>
+      <div class="math-table">
+        <table>
+          <thead>
+            <tr><th>Indicateur</th><th>Aujourd'hui</th><th>Lecture</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="label">Mots-clés indexés (Google)</span></td><td><span class="vol">~13 000</span></td><td>Actif SEO conséquent, mais non cartographié marque / hors-marque</td></tr>
+            <tr><td><span class="label">Part du trafic brandé</span></td><td><span class="you">~50%</span></td><td>Dépendance forte à la notoriété — levier hors-marque à activer</td></tr>
+            <tr><td><span class="label">Part des leads issus du SEO</span></td><td><span class="vol">~20%</span></td><td>Significatif, mais attribution au mot-clé impossible aujourd'hui</td></tr>
+            <tr><td><span class="label">Visibilité IA (score SEMrush)</span></td><td><span class="target">57%</span></td><td>Solide — base à exploiter avant que les concurrents s'y mettent</td></tr>
+            <tr><td><span class="label">Conversions via IA (ChatGPT &amp; LLM)</span></td><td><span class="vol">&lt; 1%</span></td><td>Marginal mais en accélération — la fenêtre pour prendre l'avance, c'est maintenant</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="conclusion">→ <strong>Le diagnostic est clair : la matière première est là</strong> (13K mots-clés, 57% de visibilité IA). Ce qui manque, c'est la lecture fine (quels mots-clés convertissent), le socle sur les nouvelles verticales, et un pilotage qui transforme l'opportuniste en plan d'action. C'est précisément l'objet de l'audit.</div>
+    </div>
+
+    <div class="math-block">
+      <h3>Ce que l'audit chiffre noir sur blanc (livrable été)</h3>
+      <div class="math-table">
+        <table>
+          <thead>
+            <tr><th>Bloc audité</th><th>Ce que vous obtenez</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="label">Sémantique</span></td><td>Cartographie des 13K mots-clés, séparation marque / hors-marque, gap sur e-learning &amp; petite enfance (volumes + difficulté réels)</td></tr>
+            <tr><td><span class="label">GEO / IA</span></td><td>Monitoring des prompts du secteur, positionnement &amp; mentions sur ChatGPT / Perplexity / Gemini, share of voice, reco action par prompt</td></tr>
+            <tr><td><span class="label">Technique</span></td><td>Données structurées, sitemap, robots.txt, llm.txt, Store Locator, cohérence site / GMB</td></tr>
+            <tr><td><span class="label">Autorité</span></td><td>Avis, témoignages, sites-sources utilisés par les IA dans votre secteur</td></tr>
+            <tr><td><span class="label">Attribution</span></td><td>Reco de paramétrage HubSpot pour enfin tracer marque / hors-marque jusqu'au lead</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="conclusion">→ Livrable = un <strong>état des lieux complet + une roadmap priorisée sur 6-12 mois</strong>, avec l'estimation de la charge mensuelle nécessaire. C'est la base de l'accompagnement de septembre.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PÉRIMÈTRE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">📦 Périmètre — Comment on travaille ensemble</div>
+    <h2>2 temps : l'audit, puis le pilotage.</h2>
+    <p class="lead">D'abord on cadre (audit cet été). Ensuite je pilote (dès septembre). Vous mettez vos ressources à disposition, je donne le rythme et j'absorbe ce que votre équipe ne peut pas faire.</p>
+
+    <div class="deliv-grid">
+      <!-- BLOC 1 -->
+      <div class="deliv-card">
+        <span class="deliv-num">Étape 1 · Été 2026</span>
+        <h3 class="deliv-title">🔍 Audit SEO/GEO + roadmap</h3>
+        <p class="deliv-desc">L'état des lieux complet et actionnable. Livrable autoporteur : utile même si vous décidez de l'exécuter en interne.</p>
+        <div class="deliv-list">
+          <div class="deliv-item">Audit <strong>technique</strong> : données structurées, sitemap, robots.txt, llm.txt, Store Locator, cohérence site / GMB</div>
+          <div class="deliv-item">Audit <strong>sémantique</strong> : cartographie 13K mots-clés, marque vs hors-marque, gap e-learning + petite enfance</div>
+          <div class="deliv-item">Audit <strong>GEO</strong> : prompts, positionnement, mentions, share of voice, reco par prompt (via l'app Decupler)</div>
+          <div class="deliv-item">Audit <strong>autorité</strong> + reco tracking HubSpot</div>
+          <div class="deliv-item"><strong>Roadmap priorisée 6-12 mois</strong> + estimation de charge mensuelle</div>
+        </div>
+      </div>
+
+      <!-- BLOC 2 -->
+      <div class="deliv-card">
+        <span class="deliv-num">Étape 2 · Dès septembre · cœur de la mission</span>
+        <h3 class="deliv-title">🚀 Pilotage SEO/GEO mensuel</h3>
+        <p class="deliv-desc">Un seul interlocuteur expert, moteur, qui exécute la roadmap et fait monter votre équipe en compétence.</p>
+        <div class="deliv-list">
+          <div class="deliv-item"><strong>Pilotage de la roadmap</strong> : priorisation, rythme, lots à produire, coordination avec Les Bons Tech sur la technique</div>
+          <div class="deliv-item"><strong>Production déléguée</strong> : pages verticales (e-learning, petite enfance), contenu SEO, intégration — ce que votre équipe ne peut pas absorber</div>
+          <div class="deliv-item"><strong>Autorité &amp; netlinking</strong> : citations sur les sites-sources des IA, avis, signaux locaux</div>
+          <div class="deliv-item"><strong>Monitoring continu</strong> : positions, mentions IA &amp; Google, share of voice — reporting mensuel</div>
+          <div class="deliv-item"><strong>Montée en compétence</strong> de vos chargés de com sur le SEO/GEO</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HORS PÉRIMÈTRE -->
+    <div class="scope-out">
+      <h3>🚧 Répartition claire des rôles</h3>
+      <p><strong>L'intégration technique lourde reste chez Les Bons Tech</strong> (structure de page, données structurées) — comme prévu dans votre organisation actuelle. Je fournis les recommandations précises, je coordonne, je valide. <br><br><strong>L'outil</strong> : l'app Decupler est incluse dans l'accompagnement (avec la granularité de reco par prompt que les outils du marché n'ont pas). Vous restez <strong>totalement libres</strong> d'utiliser un outil tiers en parallèle — ce n'est en rien un point de dépendance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">📅 Timeline</div>
+    <h2>Cadré cet été, opérationnel en septembre.</h2>
+    <p class="lead">Votre calendrier : décision en juin, démarrage en septembre. On s'y aligne exactement.</p>
+
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-month">Juin</div>
+        <div class="timeline-content"><strong>Décision &amp; cadrage.</strong> Validation de la proposition, accès (Search Console, Analytics, HubSpot, GMB, WordPress), lancement de l'audit.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-month">Juillet–Août</div>
+        <div class="timeline-content"><strong>Audit &amp; roadmap.</strong> État des lieux complet SEO/GEO + technique + autorité. Roadmap priorisée 6-12 mois. Estimation de la charge mensuelle. Restitution.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-month">Septembre</div>
+        <div class="timeline-content"><strong>Démarrage du pilotage.</strong> Lancement des premiers lots (verticales prioritaires), mise en place du monitoring, premier point de coordination avec Les Bons Tech.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-month">Sept. → +12 mois</div>
+        <div class="timeline-content"><strong>Exécution &amp; itération.</strong> Production, autorité, reporting mensuel, montée en compétence de l'équipe. On ajuste la roadmap selon les résultats.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">💼 Investissement</div>
+    <h2>Deux lignes, transparentes.</h2>
+    <p class="lead">L'audit est le ticket d'entrée et la base de tout. L'accompagnement démarre une fois la roadmap posée — et il est calibré sur la charge réelle qu'elle révèle.</p>
+
+    <div class="price-grid">
+      <div class="price-block">
+        <span class="price-label">Étape 1 · Audit SEO/GEO</span>
+        <div class="price-amount">2 000 € HT</div>
+        <span class="price-unit">forfait one-shot · livré cet été</span>
+        <p class="price-includes"><strong>Inclus</strong> : audit technique, sémantique, GEO/IA, autorité, reco tracking HubSpot, et une <strong>roadmap priorisée 6-12 mois</strong> avec estimation de charge. Livrable actionnable, qui vous appartient.</p>
+      </div>
+      <div class="price-block alt">
+        <span class="price-label">Étape 2 · Pilotage mensuel</span>
+        <div class="price-amount">2 000 € HT<span style="font-size:1rem;font-weight:600">/mois</span></div>
+        <span class="price-unit">forfait · à partir de septembre</span>
+        <p class="price-includes"><strong>Inclus</strong> : pilotage de la roadmap, production déléguée, autorité/netlinking, monitoring &amp; reporting, app Decupler, montée en compétence de l'équipe. <strong>Sans engagement de durée</strong> — on continue tant que ça délivre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIE + URGENCE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">🛡️ Conditions</div>
+    <h2>Vous décidez en confiance.</h2>
+    <p class="lead">L'audit dérisque tout le reste : vous savez exactement où vous mettez les pieds avant de vous engager sur l'accompagnement.</p>
+
+    <div class="guard-grid">
+      <div class="guard-card">
+        <span class="guard-icon">🚪</span>
+        <h3 class="guard-title">L'audit dérisque l'accompagnement</h3>
+        <p class="guard-desc">Vous commencez par l'audit (2K). À la restitution, <strong>vous décidez en connaissance de cause</strong> si on continue ensemble sur le pilotage. Pas d'engagement à l'aveugle.</p>
+      </div>
+      <div class="guard-card">
+        <span class="guard-icon">⏳</span>
+        <h3 class="guard-title">Pour démarrer en septembre</h3>
+        <p class="guard-desc">Il faut lancer <strong>l'audit en juin/juillet</strong> pour que la roadmap soit prête et le pilotage opérationnel dès la rentrée. D'où votre fenêtre de décision avant fin juin.</p>
+      </div>
+    </div>
+
+    <!-- CLIENTS -->
+    <div class="client-logos">
+      <div class="client-logos-label">Quelques clients accompagnés en SEO</div>
+      <div class="client-logos-list">Decathlon · Société Générale · Le Point · Sodexo · Pluxee</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag">✅ Pour avancer</div>
+    <h2>Trois façons de bouger.</h2>
+    <p class="lead">Le plus simple : on lance l'audit et la roadmap est sur votre bureau avant la rentrée.</p>
+
+    <div class="ctas">
+      <div class="cta-card">
+        <span class="cta-icon">⚡</span>
+        <h3 class="cta-title">Lancer l'audit</h3>
+        <p class="cta-desc">Devis envoyé sous 1h. Cadrage et accès calés dans la foulée.</p>
+        <a class="cta-btn green" href="mailto:projects@decupler.com?subject=Terrade%20-%20Validation%20audit">Je valide →</a>
+      </div>
+      <div class="cta-card">
+        <span class="cta-icon">📅</span>
+        <h3 class="cta-title">30 min pour clarifier</h3>
+        <p class="cta-desc">On revoit ensemble le périmètre et les points à préciser. Pas de pitch — vos questions.</p>
+        <a class="cta-btn violet" href="https://calendly.com/fenina-nathan/consultationstrategique" target="_blank">Réserver →</a>
+      </div>
+      <div class="cta-card">
+        <span class="cta-icon">✉️</span>
+        <h3 class="cta-title">Question rapide</h3>
+        <p class="cta-desc">Un point précis avant de bouger ? Je réponds sous 24h ouvrées.</p>
+        <a class="cta-btn amber" href="mailto:projects@decupler.com?subject=Terrade%20-%20Question%20propal">Envoyer →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <p><strong>Nathan Fenina</strong> · Founder, Decupler</p>
+    <p>projects@decupler.com · <a href="https://decupler.com" target="_blank">decupler.com</a></p>
+    <p class="small">Proposition confidentielle pour École Terrade · 2 juin 2026 · Décision visée avant le 30 juin 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
